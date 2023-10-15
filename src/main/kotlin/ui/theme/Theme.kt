@@ -9,7 +9,7 @@ import androidx.compose.runtime.Composable
 import ui.theme.*
 
 
-public val LightColors = Colors(
+ val LightColors = Colors(
     primary = md_theme_light_primary,
     primaryVariant = md_theme_light_primaryContainer,
     secondary = md_theme_light_secondary,

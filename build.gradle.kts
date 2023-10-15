@@ -21,8 +21,16 @@ dependencies {
     // With compose.desktop.common you will also lose @Preview functionality
     implementation(compose.desktop.currentOs)
 
-    // Material 3
-    implementation("org.jetbrains.compose.material3:material3-desktop:1.2.1")
+    // Material 3 {1.3.0 working}
+    implementation("org.jetbrains.compose.material3:material3-desktop:1.3.0")
+
+    // Exposed
+    val exposedVersion = "0.44.0"
+    implementation("org.jetbrains.exposed:exposed-core:$exposedVersion")
+    implementation("org.jetbrains.exposed:exposed-dao:$exposedVersion")
+    implementation("org.jetbrains.exposed:exposed-jdbc:$exposedVersion")
+    implementation("org.xerial:sqlite-jdbc:3.30.1")
+
 }
 
 compose.desktop {
@@ -31,7 +39,7 @@ compose.desktop {
 
         nativeDistributions {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
-            packageName = "vitascan"
+            packageName = "vita scan"
             packageVersion = "1.0.0"
         }
     }
