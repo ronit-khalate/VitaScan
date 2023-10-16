@@ -31,6 +31,10 @@ dependencies {
     implementation("org.jetbrains.exposed:exposed-jdbc:$exposedVersion")
     implementation("org.xerial:sqlite-jdbc:3.30.1")
 
+    // Navigation
+    val navVersion = "2.7.4"
+    implementation ("androidx.navigation:navigation-compose:$navVersion")
+
 }
 
 compose.desktop {

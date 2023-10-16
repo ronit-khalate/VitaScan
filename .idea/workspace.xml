@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4a558f88-293a-4dcd-8f58-c50e16093ffd" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/components/TopBar.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/login_page/LoginScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/login_page/LoginScreen.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/login_page/components/LoginCard.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/login_page/components/LoginCard.kt" afterDir="false" />
     </list>
@@ -22,9 +24,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Kotlin File" />
         <option value="Kotlin Interface" />
         <option value="Kotlin Class" />
+        <option value="Kotlin File" />
       </list>
     </option>
   </component>
@@ -82,7 +84,7 @@
       <updated>1697364761868</updated>
       <workItem from="1697364762882" duration="10658000" />
       <workItem from="1697385374491" duration="8589000" />
-      <workItem from="1697432122765" duration="1822000" />
+      <workItem from="1697432122765" duration="2883000" />
     </task>
     <servers />
   </component>
