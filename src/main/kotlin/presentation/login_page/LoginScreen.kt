@@ -2,10 +2,13 @@ package presentation.login_page
 
 import androidx.compose.desktop.ui.tooling.preview.Preview
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.unit.dp
 import domain.viewmodel.Viewmodel
 import presentation.login_page.components.LoginCard
@@ -24,8 +27,9 @@ fun LoginScreen(
         LoginPageBackground(modifier=modifier)
         LoginCard(
             modifier=Modifier
-            .fillMaxWidth(0.6f)
-            .fillMaxHeight(0.65f),
+                .fillMaxWidth(0.6f)
+                .fillMaxHeight(0.65f)
+                .clip(shape = RoundedCornerShape(30.dp)),
             onLoginIdValueChange ={viewModel.loginId=it},
             onLoginPasswordValueChange = {viewModel.loginPassword=it},
             onLoginAsAdminCheckedChange = {viewModel.loginAsAdmin=it},

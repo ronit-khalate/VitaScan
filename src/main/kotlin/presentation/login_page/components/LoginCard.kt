@@ -35,8 +35,7 @@ fun LoginCard(
 
     Card(
         modifier=modifier,
-        elevation = 4.dp,
-        shape = RoundedCornerShape(10.dp),
+        elevation = 1.dp,
         backgroundColor = Color.Transparent
     ){
 
