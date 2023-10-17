@@ -32,7 +32,10 @@ dependencies {
     implementation("org.xerial:sqlite-jdbc:3.30.1")
 
     // Navigation
+        // Extension module for desktop
     implementation ("com.arkivanov.decompose:extensions-compose-jetbrains:<version>")
+        //  Decompose dependency
+    implementation ("com.arkivanov.decompose:decompose:<version>")
 
 }
 
