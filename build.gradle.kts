@@ -21,6 +21,9 @@ dependencies {
     // With compose.desktop.common you will also lose @Preview functionality
     implementation(compose.desktop.currentOs)
 
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.2.1")
+
+
     // Material 3 {1.3.0 working}
     implementation("org.jetbrains.compose.material3:material3-desktop:1.3.0")
 
@@ -32,10 +35,11 @@ dependencies {
     implementation("org.xerial:sqlite-jdbc:3.30.1")
 
     // Navigation
+    val decomposeVersion="2.1.2"
         // Extension module for desktop
-    implementation ("com.arkivanov.decompose:extensions-compose-jetbrains:<version>")
+    implementation ("com.arkivanov.decompose:extensions-compose-jetbrains:$decomposeVersion")
         //  Decompose dependency
-    implementation ("com.arkivanov.decompose:decompose:<version>")
+    implementation ("com.arkivanov.decompose:decompose:$decomposeVersion")
 
 }
 
