@@ -11,14 +11,14 @@ import ui.theme.*
 
  val LightColors = Colors(
     primary = md_theme_light_primary,
-    primaryVariant = md_theme_light_primaryContainer,
-    secondary = md_theme_light_secondary,
-    secondaryVariant = md_theme_light_secondaryContainer,
+    primaryVariant = md_theme_light_tertiaryContainer,
+    secondary = md_theme_light_primaryContainer,
+    secondaryVariant = md_theme_light_primaryContainer,
     background = md_theme_light_background,
     surface = md_theme_light_surface,
     error = md_theme_light_error,
     onPrimary = md_theme_light_onPrimary,
-    onSecondary = md_theme_light_onSecondary,
+    onSecondary = md_theme_light_onPrimaryContainer,
     onBackground = md_theme_light_onBackground,
     onSurface = md_theme_light_onSurface,
     onError = md_theme_light_onError,
