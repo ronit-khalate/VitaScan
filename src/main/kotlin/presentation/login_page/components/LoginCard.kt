@@ -57,7 +57,7 @@ fun LoginCard(
                     fontSize = 60.sp,
                     style = MaterialTheme.typography.headlineLarge,
                     fontWeight = FontWeight.Black,
-                    color = MaterialTheme.colorScheme.surface
+                    color = androidx.compose.material.MaterialTheme.colors.onPrimary
                 )
 
 
@@ -123,11 +123,11 @@ fun LoginCard(
                         .width(250.dp),
                     shape = RoundedCornerShape(10.dp),
                     colors = ButtonDefaults.buttonColors(
-                        backgroundColor = MaterialTheme.colorScheme.primary
+                        backgroundColor = androidx.compose.material.MaterialTheme.colors.primary
                     ),
                     onClick = onLogin
                 ){
-                    Text("Log in")
+                    Text("Log in", color = androidx.compose.material.MaterialTheme.colors.onSurface)
                 }
 
 
