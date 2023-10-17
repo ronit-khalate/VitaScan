@@ -9,6 +9,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.unit.dp
+import com.arkivanov.decompose.router.stack.StackNavigation
 import presentation.login_page.components.LoginCard
 import presentation.login_page.components.LoginPageBackground
 
@@ -53,5 +54,5 @@ fun LoginScreen(
 @Composable
 @Preview
 fun LoginPreview(){
-    LoginScreen(modifier = Modifier.fillMaxSize(), viewModel = LoginScreenViewModel())
+    LoginScreen(modifier = Modifier.fillMaxSize(), viewModel = LoginScreenViewModel(navigation = StackNavigation()))
 }

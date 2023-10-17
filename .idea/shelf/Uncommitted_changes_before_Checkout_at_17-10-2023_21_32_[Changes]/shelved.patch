@@ -1,0 +1,154 @@
+Index: src/main/kotlin/navigation/Screens.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package navigation\r\n\r\nsealed class Screen(val route:String) {\r\n\r\n    object Login:Screen(route = \"login_screen\")\r\n    object AdminHome:Screen(route = \"adminHome_screen\")\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/kotlin/navigation/Screens.kt b/src/main/kotlin/navigation/Screens.kt
+--- a/src/main/kotlin/navigation/Screens.kt	(revision fab31747bfb03adce8fb3cf204738b1312eb9b34)
++++ b/src/main/kotlin/navigation/Screens.kt	(date 1697552266312)
+@@ -1,7 +1,13 @@
+ package navigation
+ 
+-sealed class Screen(val route:String) {
++import com.arkivanov.essenty.parcelable.Parcelable
++import com.arkivanov.essenty.parcelable.Parcelize
++
+ 
++sealed class Screen(val route:String):Parcelable{
++
++    @Parcelize
+     object Login:Screen(route = "login_screen")
++    @Parcelize
+     object AdminHome:Screen(route = "adminHome_screen")
+ }
+\ No newline at end of file
+Index: build.gradle.kts
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import org.jetbrains.compose.desktop.application.dsl.TargetFormat\r\n\r\nplugins {\r\n    kotlin(\"jvm\")\r\n    id(\"org.jetbrains.compose\")\r\n}\r\n\r\ngroup = \"com.example\"\r\nversion = \"1.0-SNAPSHOT\"\r\n\r\nrepositories {\r\n    mavenCentral()\r\n    maven(\"https://maven.pkg.jetbrains.space/public/p/compose/dev\")\r\n    google()\r\n}\r\n\r\ndependencies {\r\n    // Note, if you develop a library, you should use compose.desktop.common.\r\n    // compose.desktop.currentOs should be used in launcher-sourceSet\r\n    // (in a separate module for demo project and in testMain).\r\n    // With compose.desktop.common you will also lose @Preview functionality\r\n    implementation(compose.desktop.currentOs)\r\n\r\n    // Material 3 {1.3.0 working}\r\n    implementation(\"org.jetbrains.compose.material3:material3-desktop:1.3.0\")\r\n\r\n    // Exposed\r\n    val exposedVersion = \"0.44.0\"\r\n    implementation(\"org.jetbrains.exposed:exposed-core:$exposedVersion\")\r\n    implementation(\"org.jetbrains.exposed:exposed-dao:$exposedVersion\")\r\n    implementation(\"org.jetbrains.exposed:exposed-jdbc:$exposedVersion\")\r\n    implementation(\"org.xerial:sqlite-jdbc:3.30.1\")\r\n\r\n    // Navigation\r\n    val navVersion = \"2.7.4\"\r\n    implementation (\"androidx.navigation:navigation-compose:$navVersion\")\r\n\r\n}\r\n\r\ncompose.desktop {\r\n    application {\r\n        mainClass = \"MainKt\"\r\n\r\n        nativeDistributions {\r\n            targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)\r\n            packageName = \"vita scan\"\r\n            packageVersion = \"1.0.0\"\r\n        }\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/build.gradle.kts b/build.gradle.kts
+--- a/build.gradle.kts	(revision fab31747bfb03adce8fb3cf204738b1312eb9b34)
++++ b/build.gradle.kts	(date 1697558536710)
+@@ -31,9 +31,7 @@
+     implementation("org.jetbrains.exposed:exposed-jdbc:$exposedVersion")
+     implementation("org.xerial:sqlite-jdbc:3.30.1")
+ 
+-    // Navigation
+-    val navVersion = "2.7.4"
+-    implementation ("androidx.navigation:navigation-compose:$navVersion")
++
+ 
+ }
+ 
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"4a558f88-293a-4dcd-8f58-c50e16093ffd\" name=\"Changes\" comment=\"\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/kotlin/presentation/login_page/LoginScreen.kt\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/kotlin/presentation/login_page/LoginScreen.kt\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/kotlin/presentation/login_page/components/LoginCard.kt\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/kotlin/presentation/login_page/components/LoginCard.kt\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"ExternalProjectsData\">\r\n    <projectState path=\"$PROJECT_DIR$\">\r\n      <ProjectState />\r\n    </projectState>\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Kotlin File\" />\r\n        <option value=\"Kotlin Interface\" />\r\n        <option value=\"Kotlin Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"ProblemsViewState\">\r\n    <option name=\"selectedTabId\" value=\"CurrentFile\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 7\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2WnODecfsbhR9CzTBOCCwxPFaGp\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\r\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;master&quot;,\r\n    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;E:/VitaScan/Vitascan/src/main/kotlin/ui&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\r\n    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,\r\n    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,\r\n    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,\r\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"E:\\VitaScan\\Vitascan\\src\\main\\kotlin\\ui\" />\r\n    </key>\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"E:\\VitaScan\\Vitascan\\src\\main\\kotlin\" />\r\n      <recent name=\"E:\\VitaScan\\Vitascan\\src\\main\\kotlin\\ui\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"4a558f88-293a-4dcd-8f58-c50e16093ffd\" name=\"Changes\" comment=\"\" />\r\n      <created>1697364761868</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1697364761868</updated>\r\n      <workItem from=\"1697364762882\" duration=\"10658000\" />\r\n      <workItem from=\"1697385374491\" duration=\"8589000\" />\r\n      <workItem from=\"1697432122765\" duration=\"1822000\" />\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"XDebuggerManager\">\r\n    <breakpoint-manager>\r\n      <breakpoints>\r\n        <breakpoint enabled=\"true\" type=\"java-exception\">\r\n          <properties class=\"java.lang.UnsatisfiedLinkError\" package=\"java.lang\" />\r\n          <option name=\"timeStamp\" value=\"5\" />\r\n        </breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"kotlin-function\">\r\n          <url>file://$PROJECT_DIR$/src/main/kotlin/presentation/login_page/components/LoginCard.kt</url>\r\n          <line>152</line>\r\n          <properties method=\"LoginCardPre\">\r\n            <option name=\"EMULATED\" value=\"true\" />\r\n            <option name=\"WATCH_EXIT\" value=\"false\" />\r\n          </properties>\r\n          <option name=\"timeStamp\" value=\"8\" />\r\n        </line-breakpoint>\r\n      </breakpoints>\r\n    </breakpoint-manager>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision fab31747bfb03adce8fb3cf204738b1312eb9b34)
++++ b/.idea/workspace.xml	(date 1697558481971)
+@@ -6,8 +6,7 @@
+   <component name="ChangeListManager">
+     <list default="true" id="4a558f88-293a-4dcd-8f58-c50e16093ffd" name="Changes" comment="">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/login_page/LoginScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/login_page/LoginScreen.kt" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/login_page/components/LoginCard.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/login_page/components/LoginCard.kt" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/kotlin/navigation/Screens.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/navigation/Screens.kt" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -29,7 +28,18 @@
+     </option>
+   </component>
+   <component name="Git.Settings">
++    <option name="RECENT_BRANCH_BY_REPOSITORY">
++      <map>
++        <entry key="$PROJECT_DIR$" value="navigation" />
++      </map>
++    </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
++  </component>
++  <component name="HighlightingSettingsPerFile">
++    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.compose.material/material-desktop/1.4.1/51750a0024449892cf637eb8eef96a0fa3dd9712/material-desktop-1.4.1-sources.jar!/commonMain/androidx/compose/material/Colors.kt" root0="SKIP_INSPECTION" />
++    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.compose.material/material-desktop/1.4.1/51750a0024449892cf637eb8eef96a0fa3dd9712/material-desktop-1.4.1-sources.jar!/commonMain/androidx/compose/material/MaterialTheme.kt" root0="SKIP_INSPECTION" />
++    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.compose.ui/ui-desktop/1.4.1/d9e1fc41d26f7a2703d812635a8e5d2a7181a19b/ui-desktop-1.4.1-sources.jar!/commonMain/androidx/compose/ui/layout/ContentScale.kt" root0="SKIP_INSPECTION" />
++    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.compose.ui/ui-text-desktop/1.4.1/fd7eaca24cb09940b10d96ce00600c7765dff1d1/ui-text-desktop-1.4.1-sources.jar!/commonMain/androidx/compose/ui/text/TextStyle.kt" root0="SKIP_INSPECTION" />
+   </component>
+   <component name="ProblemsViewState">
+     <option name="selectedTabId" value="CurrentFile" />
+@@ -43,26 +53,26 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent">{
+-  &quot;keyToString&quot;: {
+-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+-    &quot;last_opened_file_path&quot;: &quot;E:/VitaScan/Vitascan/src/main/kotlin/ui&quot;,
+-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "RunOnceActivity.OpenProjectViewOnStart": "true",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
++    "WebServerToolWindowFactoryState": "false",
++    "git-widget-placeholder": "master",
++    "ignore.virus.scanning.warn.message": "true",
++    "last_opened_file_path": "E:/VitaScan/Vitascan/src/main/kotlin/ui",
++    "node.js.detected.package.eslint": "true",
++    "node.js.detected.package.tslint": "true",
++    "node.js.selected.package.eslint": "(autodetect)",
++    "node.js.selected.package.tslint": "(autodetect)",
++    "nodejs_package_manager_path": "npm",
++    "project.structure.last.edited": "Modules",
++    "project.structure.proportion": "0.0",
++    "project.structure.side.proportion": "0.0",
++    "vue.rearranger.settings.migration": "true"
+   }
+-}</component>
++}]]></component>
+   <component name="RecentsManager">
+     <key name="CopyFile.RECENT_KEYS">
+       <recent name="E:\VitaScan\Vitascan\src\main\kotlin\ui" />
+@@ -99,11 +109,20 @@
+         <line-breakpoint enabled="true" type="kotlin-function">
+           <url>file://$PROJECT_DIR$/src/main/kotlin/presentation/login_page/components/LoginCard.kt</url>
+           <line>152</line>
+-          <properties method="LoginCardPre">
++          <properties>
+             <option name="EMULATED" value="true" />
+             <option name="WATCH_EXIT" value="false" />
+           </properties>
+           <option name="timeStamp" value="8" />
++        </line-breakpoint>
++        <line-breakpoint enabled="true" type="kotlin-function">
++          <url>file://$PROJECT_DIR$/src/main/kotlin/presentation/components/TopBar.kt</url>
++          <line>109</line>
++          <properties>
++            <option name="EMULATED" value="true" />
++            <option name="WATCH_EXIT" value="false" />
++          </properties>
++          <option name="timeStamp" value="11" />
+         </line-breakpoint>
+       </breakpoints>
+     </breakpoint-manager>
