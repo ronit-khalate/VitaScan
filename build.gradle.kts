@@ -32,8 +32,7 @@ dependencies {
     implementation("org.xerial:sqlite-jdbc:3.30.1")
 
     // Navigation
-    val navVersion = "2.7.4"
-    implementation ("androidx.navigation:navigation-compose:$navVersion")
+    implementation ("com.arkivanov.decompose:extensions-compose-jetbrains:<version>")
 
 }
 
