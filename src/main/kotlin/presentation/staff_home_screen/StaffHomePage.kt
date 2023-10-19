@@ -74,7 +74,7 @@ fun StaffHomePage(
                 OutlinedButton(
                     modifier = Modifier
                         .width(120.dp),
-                    onClick = {},
+                    onClick = onViewRecordClick,
                     border = BorderStroke(2.dp, color = MaterialTheme.colors.primary),
                     shape = RoundedCornerShape(20.dp),
                     colors = ButtonDefaults.outlinedButtonColors(backgroundColor = MaterialTheme.colors.onPrimary)
@@ -87,7 +87,7 @@ fun StaffHomePage(
                 Button(
                     modifier = Modifier
                         .width(120.dp),
-                    onClick = {},
+                    onClick = onInsertClick,
                     shape = RoundedCornerShape(20.dp),
 
                 ){
