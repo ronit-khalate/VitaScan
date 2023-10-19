@@ -7,13 +7,14 @@ import javax.swing.JFileChooser
 import javax.swing.filechooser.FileFilter
 
 
-private val user=System.getenv("USERPROFILE")
+// User Directory
+private val userDirectory=System.getenv("USERPROFILE")
 fun OpenFileDialog(onSelectedPath:(List<String>)->Unit){
 
     val fileChooser = JFileChooser()
 
     fileChooser.isMultiSelectionEnabled=true
-    fileChooser.currentDirectory= File("C:\\Users\\$user\\Downloads")
+    fileChooser.currentDirectory= File("$userDirectory\\Downloads")
 
 
     // File Filter to only show images
