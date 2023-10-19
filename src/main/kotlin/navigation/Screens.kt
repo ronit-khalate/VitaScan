@@ -11,12 +11,15 @@ import com.arkivanov.essenty.parcelable.Parcelable
 import com.arkivanov.essenty.parcelable.Parcelize
 
 
-sealed class Screen(val route:String):Parcelable{
+sealed class Screen():Parcelable{
 
     @Parcelize
-    object Login:Screen(route = "login_screen")
+    object Login:Screen()
     @Parcelize
-    object AdminHome:Screen(route = "adminHome_screen")
+    object AdminHome:Screen()
+
+    @Parcelize
+    object StaffHome:Screen()
 }
 
 val LocalComponentContext:ProvidableCompositionLocal<ComponentContext> =
