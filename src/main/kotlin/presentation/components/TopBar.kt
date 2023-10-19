@@ -3,21 +3,27 @@ package presentation.components
 import androidx.compose.desktop.ui.tooling.preview.Preview
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
+
 import androidx.compose.material.MaterialTheme
-import androidx.compose.material3.Divider
-import androidx.compose.material3.NavigationBar
-import androidx.compose.material3.Text
+import androidx.compose.material.icons.Icons
+import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.loadImageBitmap
 import androidx.compose.ui.res.useResource
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 
 
 @Composable
@@ -25,7 +31,7 @@ fun TopBar(
     modifier: Modifier=Modifier
 ){
 
-    val image =useResource("vitascan_Logo.png"){
+    val image =useResource("vitascan_Logo (2).png"){
 
         loadImageBitmap(it)
     }
@@ -34,31 +40,86 @@ fun TopBar(
     NavigationBar(
         modifier = modifier
             .height(60.dp),
-        containerColor = MaterialTheme.colors.primary,
-        tonalElevation = 5.dp
+        containerColor = MaterialTheme.colors.background,
+        tonalElevation = 20.dp,
+
 
     ){
 
-        Column(
-            modifier=Modifier
-                .fillMaxHeight(),
-            verticalArrangement = Arrangement.Center
+        Row(
+            modifier = Modifier
+                .fillMaxSize()
+                .background(MaterialTheme.colors.background),
+            horizontalArrangement = Arrangement.SpaceEvenly,
+            verticalAlignment = Alignment.CenterVertically
         ) {
 
-            Image(
+
+            // Logo
+            Row(
                 modifier = Modifier
-                    .height(60.dp),
-                bitmap = image,contentDescription = null,
-                contentScale = ContentScale.FillHeight,)
+                    .weight(1f)
+                    .padding(start = 10.dp),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.Start
+
+            ){
+
+                Image(
+                    bitmap = image,
+                    contentDescription = null,
+                    modifier=Modifier
+                        .size(100.dp)
+                )
+                Spacer(modifier=Modifier.width(0.dp))
+                Text(
+                    text="VitaScan",
+                    style = MaterialTheme.typography.body2,
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 30.sp
+                    )
+            }
+
+
+            Row(
+                modifier = Modifier
+                    .weight(2f)
+                    .background(MaterialTheme.colors.background),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.Center
+            ){
+                NavBarTab(tabName = "Home", onClick = {})
+                Spacer(modifier=Modifier.width(60.dp))
+                NavBarTab(tabName = "About Us", onClick = {})
+            }
+
+
+
+            Row(
+                modifier=Modifier
+                    .background(MaterialTheme.colors.primary)
+                    .fillMaxHeight()
+                    .width(350.dp)
+                    .padding(end = 7.dp),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.End
+
+            ) {
+
+                Box(
+                    modifier=Modifier
+                        .size(50.dp)
+                        .clip(CircleShape)
+                        .background(MaterialTheme.colors.background)
+                        .clickable {  },
+                    contentAlignment = Alignment.Center
+                ){
+
+                    Text("S", fontWeight = FontWeight.SemiBold, fontSize = 30.sp)
+
+                }
+            }
         }
-
-
-
-        NavBarTab("Home")
-        Spacer(modifier=Modifier.width(10.dp))
-        NavBarTab("Patients")
-
-
 
 
     }
@@ -66,7 +127,10 @@ fun TopBar(
 
 
 @Composable
-fun NavBarTab(tabName:String){
+fun NavBarTab(
+    tabName:String,
+    onClick:()-> Unit
+){
     Column(
         modifier=Modifier
             .fillMaxHeight()
@@ -84,9 +148,9 @@ fun NavBarTab(tabName:String){
         Text(
             text = tabName,
             style = MaterialTheme.typography.body2,
-            color = MaterialTheme.colors.surface,
-            fontWeight = FontWeight.W600
-            )
+            color = MaterialTheme.colors.onBackground,
+            fontWeight = FontWeight.Bold
+        )
 
 
 
