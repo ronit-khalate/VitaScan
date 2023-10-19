@@ -15,6 +15,8 @@ fun OpenFileDialog(onSelectedPath:(List<String>)->Unit){
     fileChooser.isMultiSelectionEnabled=true
     fileChooser.currentDirectory= File("C:\\Users\\$user\\Downloads")
 
+
+    // File Filter to only show images
     fileChooser.fileFilter=
         object : FileFilter(){
             override fun accept(f: File?): Boolean {
@@ -36,6 +38,8 @@ fun OpenFileDialog(onSelectedPath:(List<String>)->Unit){
 
         }
 
+
+    // choosen images from file dialog
     val result = fileChooser.showOpenDialog(ComposeWindow())
 
     if (result == JFileChooser.APPROVE_OPTION) {
