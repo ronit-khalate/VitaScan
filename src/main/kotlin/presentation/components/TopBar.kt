@@ -49,7 +49,7 @@ fun TopBar(
         Row(
             modifier = Modifier
                 .fillMaxSize()
-                .background(MaterialTheme.colors.background),
+                .background(Color.Transparent),
             horizontalArrangement = Arrangement.SpaceEvenly,
             verticalAlignment = Alignment.CenterVertically
         ) {
@@ -84,7 +84,7 @@ fun TopBar(
             Row(
                 modifier = Modifier
                     .weight(2f)
-                    .background(MaterialTheme.colors.background),
+                    .background(Color.Transparent),
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.Center
             ){
