@@ -11,7 +11,7 @@ import ui.theme.*
 
  val LightColors = Colors(
     primary = md_theme_light_primary,
-    primaryVariant = md_theme_light_tertiaryContainer,
+    primaryVariant = md_theme_light_primaryContainer,
     secondary = md_theme_light_primaryContainer,
     secondaryVariant = md_theme_light_primaryContainer,
     background = md_theme_light_background,
