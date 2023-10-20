@@ -106,7 +106,7 @@ fun AdminHomePage(modifier:Modifier=Modifier){
 fun AdminCard(
     icon: ImageVector,
     description: String="Add Staff",
-    onAddStaffClick:()->Unit
+    onCardClick:()->Unit
 ){
 
 
@@ -115,7 +115,7 @@ fun AdminCard(
             modifier = Modifier
                 .width(320.dp)
                 .height(320.dp)
-                .clickable{(onAddStaffClick())},
+                .clickable{(onCardClick())},
             colors = CardDefaults.cardColors(containerColor = MaterialTheme.colors.primaryVariant)
         ){
 

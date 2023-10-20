@@ -39,98 +39,106 @@ fun ViewRecordPage(){
         topBar = { TopBar(isBackButtonVisible = true) }
     ){
 
-        Column(
-            modifier = Modifier
-                .padding(it)
-                .fillMaxSize(),
+        TableBackgroundAndSearchBar(paddingValue = it)
 
-            verticalArrangement = Arrangement.Center,
-            horizontalAlignment = Alignment.CenterHorizontally
+    }
+}
+
+
+@Composable
+fun TableBackgroundAndSearchBar(
+    paddingValue:PaddingValues= PaddingValues(0.dp)
+){
+    Column(
+        modifier = Modifier
+            .padding(paddingValue)
+            .fillMaxSize(),
+
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally
+    ){
+
+        //Search Bar
+        OutlinedTextField(
+            modifier = Modifier
+                .background(MaterialTheme.colors.surface)
+                .width(500.dp)
+                .height(45.dp),
+            value = "",
+            onValueChange = {},
+            label = {
+                Text("      Search By PID", fontWeight = FontWeight.SemiBold)
+            },
+            trailingIcon = {
+                Icon(
+                    modifier = Modifier
+                        .clickable {  },
+                    imageVector = Icons.Filled.Search,
+                    contentDescription = "Search"
+
+                )
+            },
+            shape = RoundedCornerShape(30.dp)
+
+        )
+
+        Spacer(modifier = Modifier.height(20.dp))
+
+        // View
+
+        Card(
+            modifier = Modifier
+                .width(810.dp)
+                .height(510.dp),
+            elevation = CardDefaults.cardElevation(defaultElevation = 5.dp),
+            colors = CardDefaults.cardColors(containerColor = MaterialTheme.colors.primaryVariant)
+
         ){
 
-            //Search Bar
-            OutlinedTextField(
+            Column(
                 modifier = Modifier
-                    .background(MaterialTheme.colors.surface)
-                    .width(500.dp)
-                    .height(45.dp),
-                value = "",
-                onValueChange = {},
-                label = {
-                    Text("      Search By PID", fontWeight = FontWeight.SemiBold)
-                        },
-                trailingIcon = {
-                    Icon(
-                        modifier = Modifier
-                            .clickable {  },
-                        imageVector = Icons.Filled.Search,
-                        contentDescription = "Search"
-
-                    )
-               },
-                shape = RoundedCornerShape(30.dp)
-
-            )
-
-            Spacer(modifier = Modifier.height(20.dp))
-
-            // View
-
-            Card(
-                modifier = Modifier
-                    .width(810.dp)
-                    .height(510.dp),
-                elevation = CardDefaults.cardElevation(defaultElevation = 5.dp),
-                colors = CardDefaults.cardColors(containerColor = MaterialTheme.colors.primaryVariant)
-
-            ){
-
-                Column(
+                    .fillMaxSize(),
+                verticalArrangement = Arrangement.Center,
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
+                Card(
                     modifier = Modifier
-                        .fillMaxSize(),
-                    verticalArrangement = Arrangement.Center,
-                    horizontalAlignment = Alignment.CenterHorizontally
+                        .width(800.dp)
+                        .height(500.dp),
+                    elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
+                    colors = CardDefaults.cardColors(containerColor = MaterialTheme.colors.background)
                 ) {
-                    Card(
+                    Column(
                         modifier = Modifier
-                            .width(800.dp)
-                            .height(500.dp),
-                        elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
-                        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colors.background)
-                    ) {
-                        Column(
-                            modifier = Modifier
-                                .fillMaxSize(),
-                            verticalArrangement = Arrangement.Center,
-                            horizontalAlignment = Alignment.CenterHorizontally
-                        ){
+                            .fillMaxSize(),
+                        verticalArrangement = Arrangement.Center,
+                        horizontalAlignment = Alignment.CenterHorizontally
+                    ){
 
 
-                            if (true){
-                                TableContent()
-                            }
-                            else{
-
-                                Text("No Record Found ", style = MaterialTheme.typography.h3,)
-                            }
-
+                        if (true){
+                            TableContent()
                         }
+                        else{
+
+                            Text("No Record Found ", style = MaterialTheme.typography.h3,)
+                        }
+
                     }
                 }
-
-
-
-
-
-
             }
 
 
 
+
+
+
         }
+
+
+
     }
 }
-
 
 @Composable
 fun TableContent(){

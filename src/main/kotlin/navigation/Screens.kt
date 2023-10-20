@@ -20,6 +20,9 @@ sealed class Screen():Parcelable{
 
     @Parcelize
     object StaffHome:Screen()
+
+    @Parcelize
+    object ViewRecordPage:Screen()
 }
 
 val LocalComponentContext:ProvidableCompositionLocal<ComponentContext> =

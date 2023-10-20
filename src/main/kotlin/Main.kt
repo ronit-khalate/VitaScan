@@ -80,6 +80,7 @@ fun MainContent(
             is Screen.AdminHome -> AdminHomePage()
             is Screen.Login -> LoginScreen(modifier = Modifier.fillMaxSize(), viewModel = loginScreenViewModel)
             is Screen.StaffHome -> ViewRecordPage()
+            is Screen.ViewRecordPage -> TODO()
         }
 
     }
