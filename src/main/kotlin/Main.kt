@@ -71,7 +71,7 @@ fun MainContent(
 
     ChildStack(
         source = navigation,
-        initialStack = { listOf(Screen.StaffHome) },
+        initialStack = { listOf(Screen.AdminHome) },
         handleBackButton = true,
         animation = stackAnimation(fade())
     ){screen ->

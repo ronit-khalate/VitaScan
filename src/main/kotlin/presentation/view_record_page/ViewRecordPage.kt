@@ -24,6 +24,7 @@ import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+
 import presentation.components.TopBar
 
 
@@ -77,31 +78,48 @@ fun ViewRecordPage(){
 
             Card(
                 modifier = Modifier
-                    .width(800.dp)
-                    .height(500.dp),
-                elevation = CardDefaults.cardElevation(defaultElevation = 5.dp)
+                    .width(810.dp)
+                    .height(510.dp),
+                elevation = CardDefaults.cardElevation(defaultElevation = 5.dp),
+                colors = CardDefaults.cardColors(containerColor = MaterialTheme.colors.primaryVariant)
 
             ){
+
                 Column(
                     modifier = Modifier
                         .fillMaxSize(),
                     verticalArrangement = Arrangement.Center,
                     horizontalAlignment = Alignment.CenterHorizontally
-                ){
+                ) {
+                    Card(
+                        modifier = Modifier
+                            .width(800.dp)
+                            .height(500.dp),
+                        elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
+                        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colors.background)
+                    ) {
+                        Column(
+                            modifier = Modifier
+                                .fillMaxSize(),
+                            verticalArrangement = Arrangement.Center,
+                            horizontalAlignment = Alignment.CenterHorizontally
+                        ){
 
 
-                    if (false){
-                        TableContent()
+                            if (true){
+                                TableContent()
+                            }
+                            else{
+
+                                Text("No Record Found ", style = MaterialTheme.typography.h3,)
+                            }
+
+                        }
                     }
-                    else{
-
-                        Text("No Record Found ", style = MaterialTheme.typography.h3,)
-                    }
-
-
-
-
                 }
+
+
+
 
 
 

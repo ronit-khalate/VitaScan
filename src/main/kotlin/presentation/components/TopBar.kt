@@ -56,7 +56,7 @@ fun TopBar(
         Row(
             modifier = Modifier
                 .fillMaxSize()
-                .background(Color.Transparent),
+                .background(color = MaterialTheme.colors.primaryVariant),
             horizontalArrangement = Arrangement.SpaceEvenly,
             verticalAlignment = Alignment.CenterVertically
         ) {
