@@ -189,9 +189,7 @@ fun TableContent(){
             item {
                 RecordRow(
                     modifier = Modifier.fillMaxWidth(),
-                    col1Text = "Sr No",
-                    col2Text = "Date",
-                    col3Text = "Record No",
+                    column = listOf("Sr No","Date","Record No","Staff ID"),
                     color = MaterialTheme.colors.primary
                 )
             }
@@ -207,9 +205,7 @@ fun TableContent(){
                 }
                 RecordRow(
                     modifier = Modifier.fillMaxWidth(),
-                    col1Text = "Sr No",
-                    col2Text = "Date",
-                    col3Text = "Record No",
+                    column = listOf("Sr No","Date","Record No","Staff Id"),
                     color = recordRowColor
                 )
             }

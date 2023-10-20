@@ -28,9 +28,7 @@ private val columnHeight=30.dp
 @Composable
 fun RecordRow(
     modifier: Modifier=Modifier,
-    col2Text:String,
-    col1Text:String,
-    col3Text:String,
+    column:List<String>,
     color: Color
 ){
 
@@ -42,41 +40,21 @@ fun RecordRow(
 
         ){
 
-            Divider(color = MaterialTheme.colors.onSurface, modifier = Modifier.fillMaxHeight().width(1.5.dp))
-            Column(
-                modifier=Modifier
-                    .weight(1f)
-                    .fillMaxHeight(),
-                verticalArrangement = Arrangement.Center,
-                horizontalAlignment = Alignment.CenterHorizontally
-            ){
-                Text(text = col1Text)
-            }
-            Divider(color = MaterialTheme.colors.onSurface, modifier = Modifier.fillMaxHeight().width(1.5.dp))
-
-            Column(
-                modifier=Modifier
-                    .weight(1f)
-                    .fillMaxHeight(),
-                verticalArrangement = Arrangement.Center,
-                horizontalAlignment = Alignment.CenterHorizontally
-            ){
 
 
-                Text(text = col2Text)
+            for(col in column){
+                Divider(color = MaterialTheme.colors.onSurface, modifier = Modifier.fillMaxHeight().width(1.5.dp))
+                Column(
+                    modifier=Modifier
+                        .weight(1f)
+                        .fillMaxHeight(),
+                    verticalArrangement = Arrangement.Center,
+                    horizontalAlignment = Alignment.CenterHorizontally
+                ){
+                    Text(text = col)
+                }
             }
 
-            Divider(color = MaterialTheme.colors.onSurface, modifier = Modifier.fillMaxHeight().width(1.5.dp))
-
-            Column(
-                modifier=Modifier
-                    .weight(1f)
-                    .fillMaxHeight(),
-                verticalArrangement = Arrangement.Center,
-                horizontalAlignment = Alignment.CenterHorizontally
-            ){
-                Text(text = col3Text)
-            }
             Divider(color = MaterialTheme.colors.onSurface, modifier = Modifier.fillMaxHeight().width(1.5.dp))
 
 
@@ -113,5 +91,5 @@ fun RecordRow(
 @Composable
 @Preview
 private fun Preview(){
-    RecordRow(col1Text = "1", col2Text = "2", col3Text = "3", color = MaterialTheme.colors.background)
+    RecordRow(column = listOf("1","2","3"), color = MaterialTheme.colors.background)
 }
