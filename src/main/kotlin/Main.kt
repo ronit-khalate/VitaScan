@@ -26,6 +26,7 @@ import navigation.Screen
 import presentation.admin_home_page.AdminHomePage
 import presentation.login_page.LoginScreen
 import presentation.login_page.LoginScreenViewModel
+import presentation.view_record_page.ViewRecordPage
 
 
 @OptIn(ExperimentalDecomposeApi::class)
@@ -70,7 +71,7 @@ fun MainContent(
 
     ChildStack(
         source = navigation,
-        initialStack = { listOf(Screen.Login) },
+        initialStack = { listOf(Screen.StaffHome) },
         handleBackButton = true,
         animation = stackAnimation(fade())
     ){screen ->
@@ -78,6 +79,7 @@ fun MainContent(
         when(screen){
             is Screen.AdminHome -> AdminHomePage()
             is Screen.Login -> LoginScreen(modifier = Modifier.fillMaxSize(), viewModel = loginScreenViewModel)
+            is Screen.StaffHome -> ViewRecordPage()
         }
 
     }

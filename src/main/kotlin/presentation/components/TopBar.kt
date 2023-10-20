@@ -10,6 +10,8 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material.icons.filled.KeyboardArrowLeft
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -28,7 +30,9 @@ import androidx.compose.ui.unit.sp
 
 @Composable
 fun TopBar(
-    modifier: Modifier=Modifier
+    modifier: Modifier=Modifier,
+    isBackButtonVisible:Boolean=false,
+
 ){
 
     val image =useResource("vitascan_Logo (2).png"){
@@ -45,6 +49,9 @@ fun TopBar(
 
 
     ){
+
+
+
 
         Row(
             modifier = Modifier
@@ -64,6 +71,25 @@ fun TopBar(
                 horizontalArrangement = Arrangement.Start
 
             ){
+
+
+                if(isBackButtonVisible){
+
+                    Column(
+                        modifier=Modifier
+                            .fillMaxHeight(),
+                        verticalArrangement = Arrangement.Center,
+                        horizontalAlignment = Alignment.CenterHorizontally
+                    ){
+
+                        Image(
+                            modifier=Modifier
+                                .size(30.dp)
+                                .clickable {  },
+                            imageVector = Icons.Filled.KeyboardArrowLeft,
+                            contentDescription = "Go Back")
+                    }
+                }
 
                 Image(
                     bitmap = image,
