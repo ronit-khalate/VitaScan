@@ -26,14 +26,16 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import domain.model.staff.Staff
 
 
 @Composable
 fun TopBar(
+    staff: Staff,
     modifier: Modifier=Modifier,
     isBackButtonVisible:Boolean=false,
 
-){
+    ){
 
     val image =useResource("vitascan_Logo (2).png"){
 
@@ -141,7 +143,7 @@ fun TopBar(
                     contentAlignment = Alignment.Center
                 ){
 
-                    Text("S", fontWeight = FontWeight.SemiBold, fontSize = 30.sp)
+                    Text(text = staff.firstName[0].toString().uppercase(), fontWeight = FontWeight.SemiBold, fontSize = 30.sp)
 
                 }
             }
@@ -199,6 +201,6 @@ fun SelectedBottomBorder(modifier: Modifier){
 @Composable
 fun TopBarPreview(){
 
-    TopBar()
+    TopBar(Staff(34,"","Ronit","",""))
 }
 

@@ -9,20 +9,23 @@ import com.arkivanov.decompose.router.stack.StackNavigationSource
 import com.arkivanov.decompose.router.stack.childStack
 import com.arkivanov.essenty.parcelable.Parcelable
 import com.arkivanov.essenty.parcelable.Parcelize
+import domain.model.staff.Staff
 
 
-sealed class Screen():Parcelable{
-
-    @Parcelize
-    object Login:Screen()
-    @Parcelize
-    object AdminHome:Screen()
+sealed class Screen(
+    open val staff:Staff?
+):Parcelable{
 
     @Parcelize
-    object StaffHome:Screen()
+    class Login(override val staff: Staff?):Screen(staff)
+    @Parcelize
+    class AdminHome(override val staff: Staff):Screen(staff)
 
     @Parcelize
-    object ViewRecordPage:Screen()
+    class DoctorHome(override val staff: Staff):Screen(staff)
+
+    @Parcelize
+    class ViewRecordPage(override val staff: Staff):Screen(staff)
 }
 
 val LocalComponentContext:ProvidableCompositionLocal<ComponentContext> =

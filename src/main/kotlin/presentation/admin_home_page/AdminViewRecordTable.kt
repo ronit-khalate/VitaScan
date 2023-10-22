@@ -20,7 +20,7 @@ import presentation.view_record_page.ViewRecordPage
 
 @Preview
 @Composable
-fun AdminViewTable(){
+fun AdminViewTable(onClose:()->Unit){
 
     Card(
         modifier = Modifier
@@ -54,7 +54,7 @@ fun AdminViewTable(){
 
             Image(
                 modifier=Modifier
-                    .clickable {},
+                    .clickable {onClose()},
                 imageVector = Icons.Default.Close,
                 contentDescription = null
             )

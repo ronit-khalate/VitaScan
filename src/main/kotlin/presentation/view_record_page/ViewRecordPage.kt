@@ -24,19 +24,22 @@ import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import domain.model.staff.Staff
 
 import presentation.components.TopBar
 
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun ViewRecordPage(){
+fun ViewRecordPage(
+    staff:Staff
+){
 
 
 
     Scaffold(
 
-        topBar = { TopBar(isBackButtonVisible = true) }
+        topBar = { TopBar(staff=staff,isBackButtonVisible = true) }
     ){
 
         TableBackgroundAndSearchBar(paddingValue = it)
@@ -225,5 +228,5 @@ fun TableContent(){
 @Composable
 @Preview
 private fun Preview(){
-    ViewRecordPage()
+    ViewRecordPage(staff = Staff(23,"","","",""))
 }

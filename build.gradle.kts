@@ -24,6 +24,9 @@ dependencies {
 
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.2.1")
 
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+
+
 
     // Material 3 {1.3.0 working}
     implementation("org.jetbrains.compose.material3:material3-desktop:1.3.0")

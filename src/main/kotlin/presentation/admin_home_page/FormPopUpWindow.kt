@@ -1,8 +1,6 @@
 package presentation.admin_home_page
 
-import androidx.compose.desktop.ui.tooling.preview.Preview
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 
@@ -15,12 +13,8 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.window.Popup
-import androidx.compose.ui.window.Window
-import androidx.compose.ui.window.WindowState
+import domain.model.staff.Staff
 
 
 @Composable
@@ -28,7 +22,8 @@ fun AdminForm(
     modifier: Modifier=Modifier
         .height(610.dp)
         .width(510.dp),
-    onCardClose:()->Unit
+    staffState: Staff?,
+    onCardClose:()->Unit,
 ){
 
 
@@ -83,13 +78,13 @@ fun AdminForm(
 
                 row("Staff Id", "Enter Staff ID")
                 Spacer(modifier = Modifier.height(15.dp))
-                row("Staff Id", "Enter Staff ID")
+                row("Staff Name", "Enter Staff Name")
                 Spacer(modifier = Modifier.height(15.dp))
-                row("Staff Id", "Enter Staff ID")
+                row("Mobile No", "Enter Mobile Number")
                 Spacer(modifier = Modifier.height(15.dp))
-                row("Staff Id", "Enter Staff ID")
+                row("User Name", "Enter User Name")
                 Spacer(modifier = Modifier.height(15.dp))
-                row("Staff Id", "Enter Staff ID")
+                row("Password", "Enter Password")
                 Spacer(modifier = Modifier.height(15.dp))
 
                 Row(
@@ -97,7 +92,7 @@ fun AdminForm(
                         .height(60.dp)
                 ) {
 
-                    if (true) {
+                    if (staffState==null) {
                         TextButton(
                             onClick = {},
                             modifier = Modifier
@@ -163,9 +158,9 @@ fun row(
     }
 }
 
-@Composable
-@Preview
-private fun Preview(){
-    AdminForm(modifier = Modifier.height(610.dp).width(510.dp)){}
-//    row("Staff ID","Enter Staff Id")
-}
+//@Composable
+//@Preview
+//private fun Preview(){
+//    AdminForm(modifier = Modifier.height(610.dp).width(510.dp)){}
+////    row("Staff ID","Enter Staff Id")
+//}

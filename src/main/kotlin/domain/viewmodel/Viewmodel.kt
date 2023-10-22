@@ -6,6 +6,9 @@ import kotlinx.coroutines.Dispatchers
 interface Viewmodel {
 
 
-    val viewmodelScope: CoroutineScope
+    val viewmodelScopeIo: CoroutineScope
         get() = CoroutineScope(Dispatchers.IO)
+
+    val viewmodelScopeMain:CoroutineScope
+        get() = CoroutineScope(Dispatchers.Main)
 }

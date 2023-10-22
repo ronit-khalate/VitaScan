@@ -1,6 +1,5 @@
 package presentation.admin_home_page
 
-import androidx.compose.desktop.ui.tooling.preview.Preview
 import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
@@ -14,29 +13,29 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.res.loadImageBitmap
-import androidx.compose.ui.res.useResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.compose.ui.window.Popup
-import androidx.compose.ui.window.Window
+import domain.model.staff.Staff
+import domain.util.AdminPopup
 import presentation.components.TopBar
 
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun AdminHomePage(modifier:Modifier=Modifier){
+fun AdminHomePage(
+    modifier:Modifier=Modifier,
+    viewModel: AdminViewModel,
+    admin:Staff
+){
 
-    var isAddStaffFormVisible: Boolean by remember { mutableStateOf(false) }
-    var isUpdateStaffFormVisible: Boolean by remember { mutableStateOf(false) }
-    var isViewRecordStaffFormVisible: Boolean by remember { mutableStateOf(false) }
+
+
     Scaffold(
         modifier=modifier,
-        topBar = {TopBar(modifier=Modifier)}
+        topBar = {TopBar(staff = admin, modifier=Modifier)}
 
     ){
 
@@ -81,15 +80,19 @@ fun AdminHomePage(modifier:Modifier=Modifier){
                     horizontalArrangement = Arrangement.SpaceEvenly
                 ) {
 
-                    AdminCard(description = "Add Staff", icon = Icons.Filled.Add){isAddStaffFormVisible=true}
-                    AdminCard(description = "Update Staff", icon =Icons.Default.Edit){}
-                    AdminCard(description = "View Records", icon = Icons.Default.Person){}
+                    AdminCard(description = "Add Staff", icon = Icons.Filled.Add){viewModel.popWindowState=AdminPopup.AddStaffForm}
+                    AdminCard(description = "Update Staff", icon =Icons.Default.Edit){viewModel.popWindowState=AdminPopup.UpdateStaffForm}
+                    AdminCard(description = "View Records", icon = Icons.Default.Person){viewModel.popWindowState=AdminPopup.ViewRecord}
 
                 }
             }
 
-            if(isAddStaffFormVisible){
-                AdminForm{isAddStaffFormVisible=false}
+            when(viewModel.popWindowState){
+
+                AdminPopup.AddStaffForm -> AdminForm(staffState = null){viewModel.popWindowState=null}
+                AdminPopup.UpdateStaffForm -> AdminForm(staffState =Staff(id = 0, userid = "testID", firstName = "test", lastName = "test", passWord = "ada")){viewModel.popWindowState=null}
+                AdminPopup.ViewRecord -> AdminViewTable{viewModel.popWindowState=null}
+                null -> {}
             }
 
 
@@ -216,8 +219,8 @@ fun CardBackGround(
     }
 }
 
-@Preview
-@Composable
-fun AdminHomePagePreview(){
-    AdminHomePage()
-}
+//@Preview
+//@Composable
+//fun AdminHomePagePreview(){
+//    AdminHomePage(admin = Staff(23,"","","",""),)
+//}

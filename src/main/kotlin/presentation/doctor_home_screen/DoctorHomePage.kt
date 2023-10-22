@@ -1,43 +1,41 @@
-package presentation.staff_home_screen
+package presentation.doctor_home_screen
 
 import androidx.compose.desktop.ui.tooling.preview.Preview
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Button
 import androidx.compose.material.ButtonDefaults
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.OutlinedButton
-import androidx.compose.material3.ButtonColors
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Text
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
-import androidx.compose.ui.DragData
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.loadImageBitmap
 import androidx.compose.ui.res.useResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import domain.model.staff.Staff
 import presentation.components.TopBar
 
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun StaffHomePage(
+fun DoctorHomePage(
 
+    doctor:Staff,
     onViewRecordClick:()->Unit,
-    onInsertClick:()->Unit
+    onInsertClick:()->Unit,
 ){
 
     Scaffold(
 
-        topBar = { TopBar() }
+        topBar = { TopBar(staff = doctor) }
 
     ){
 
@@ -102,5 +100,6 @@ fun StaffHomePage(
 @Composable
 @Preview
 fun StaffHomePreview(){
-    StaffHomePage({},{})
+    DoctorHomePage(onInsertClick = {}, onViewRecordClick = {}, doctor = Staff(5,"","","",""))
+
 }
