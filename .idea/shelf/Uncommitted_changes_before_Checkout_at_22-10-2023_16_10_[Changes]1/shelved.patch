@@ -1,0 +1,28 @@
+Index: src/main/kotlin/ui/theme/Theme.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.compose\r\n\r\nimport androidx.compose.foundation.isSystemInDarkTheme\r\nimport androidx.compose.material.Colors\r\nimport androidx.compose.material3.MaterialTheme\r\nimport androidx.compose.material3.lightColorScheme\r\nimport androidx.compose.material3.darkColorScheme\r\nimport androidx.compose.runtime.Composable\r\nimport ui.theme.*\r\n\r\n\r\n val LightColors = Colors(\r\n    primary = md_theme_light_primary,\r\n    primaryVariant = md_theme_light_primaryContainer,\r\n    secondary = md_theme_light_primaryContainer,\r\n    secondaryVariant = md_theme_light_primaryContainer,\r\n    background = md_theme_light_background,\r\n    surface = md_theme_light_surface,\r\n    error = md_theme_light_error,\r\n    onPrimary = md_theme_light_onPrimary,\r\n    onSecondary = md_theme_light_onPrimaryContainer,\r\n    onBackground = md_theme_light_onBackground,\r\n    onSurface = md_theme_light_onSurface,\r\n    onError = md_theme_light_onError,\r\n    isLight = true\r\n)\r\n\r\n\r\npublic val DarkColors = darkColorScheme(\r\n    primary = md_theme_dark_primary,\r\n    onPrimary = md_theme_dark_onPrimary,\r\n    primaryContainer = md_theme_dark_primaryContainer,\r\n    onPrimaryContainer = md_theme_dark_onPrimaryContainer,\r\n    secondary = md_theme_dark_secondary,\r\n    onSecondary = md_theme_dark_onSecondary,\r\n    secondaryContainer = md_theme_dark_secondaryContainer,\r\n    onSecondaryContainer = md_theme_dark_onSecondaryContainer,\r\n    tertiary = md_theme_dark_tertiary,\r\n    onTertiary = md_theme_dark_onTertiary,\r\n    tertiaryContainer = md_theme_dark_tertiaryContainer,\r\n    onTertiaryContainer = md_theme_dark_onTertiaryContainer,\r\n    error = md_theme_dark_error,\r\n    errorContainer = md_theme_dark_errorContainer,\r\n    onError = md_theme_dark_onError,\r\n    onErrorContainer = md_theme_dark_onErrorContainer,\r\n    background = md_theme_dark_background,\r\n    onBackground = md_theme_dark_onBackground,\r\n    surface = md_theme_dark_surface,\r\n    onSurface = md_theme_dark_onSurface,\r\n    surfaceVariant = md_theme_dark_surfaceVariant,\r\n    onSurfaceVariant = md_theme_dark_onSurfaceVariant,\r\n    outline = md_theme_dark_outline,\r\n    inverseOnSurface = md_theme_dark_inverseOnSurface,\r\n    inverseSurface = md_theme_dark_inverseSurface,\r\n    inversePrimary = md_theme_dark_inversePrimary,\r\n    surfaceTint = md_theme_dark_surfaceTint,)\r\n//    outlineVariant = md_theme_dark_outlineVariant,\r\n//    scrim = md_theme_dark_scrim,\r\n//)\r\n//\r\n//@Composable\r\n//fun AppTheme(\r\n//  useDarkTheme: Boolean = isSystemInDarkTheme(),\r\n//  content: @Composable() () -> Unit\r\n//) {\r\n//  val colors = if (!useDarkTheme) {\r\n//    LightColors\r\n//  } else {\r\n//    DarkColors\r\n//  }\r\n//\r\n//  MaterialTheme(\r\n//    colorScheme = colors,\r\n//    content = content\r\n//  )\r\n//}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/kotlin/ui/theme/Theme.kt b/src/main/kotlin/ui/theme/Theme.kt
+--- a/src/main/kotlin/ui/theme/Theme.kt	
++++ b/src/main/kotlin/ui/theme/Theme.kt	
+@@ -1,15 +1,10 @@
+-package com.example.compose
++package ui.theme
+ 
+-import androidx.compose.foundation.isSystemInDarkTheme
+ import androidx.compose.material.Colors
+-import androidx.compose.material3.MaterialTheme
+-import androidx.compose.material3.lightColorScheme
+ import androidx.compose.material3.darkColorScheme
+-import androidx.compose.runtime.Composable
+-import ui.theme.*
+ 
+ 
+- val LightColors = Colors(
++public val LightColors = Colors(
+     primary = md_theme_light_primary,
+     primaryVariant = md_theme_light_primaryContainer,
+     secondary = md_theme_light_primaryContainer,
