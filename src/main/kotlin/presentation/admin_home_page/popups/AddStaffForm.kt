@@ -75,16 +75,15 @@ fun AdminForm(
             ) {
 
 
-
-                row("Staff Id", "Enter Staff ID")
+                UpdateStaffFormRow("Staff Id", "Enter Staff ID")
                 Spacer(modifier = Modifier.height(15.dp))
-                row("Staff Name", "Enter Staff Name")
+                UpdateStaffFormRow("First Name", "Enter Staff Name")
                 Spacer(modifier = Modifier.height(15.dp))
-                row("Mobile No", "Enter Mobile Number")
+                UpdateStaffFormRow("Last Name", "Enter User Name")
                 Spacer(modifier = Modifier.height(15.dp))
-                row("User Name", "Enter User Name")
+                UpdateStaffFormRow("Mobile No", "Enter Mobile Number")
                 Spacer(modifier = Modifier.height(15.dp))
-                row("Password", "Enter Password")
+                UpdateStaffFormRow("Password", "Enter Password")
                 Spacer(modifier = Modifier.height(15.dp))
 
                 Row(
