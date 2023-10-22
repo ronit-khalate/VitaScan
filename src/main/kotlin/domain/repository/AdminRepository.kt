@@ -4,5 +4,5 @@ import domain.model.staff.Staff
 
 interface AdminRepository {
 
-    suspend fun insertStaff(staff: Staff)
+    suspend fun AddStaff(staff: Staff)
 }

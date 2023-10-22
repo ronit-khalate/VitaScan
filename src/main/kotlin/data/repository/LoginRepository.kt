@@ -11,25 +11,14 @@ import org.jetbrains.exposed.sql.transactions.transaction
 class LoginRepository: LoginRepository{
     override suspend fun login(loginId: String, _password: String): Staff? {
 
-        var staff:Staff?=null
 
+           val staff=transaction {
 
-
-
-
-           staff=transaction {
-
-               try {
-                   println("In try")
                    StaffTable.select{
-                       StaffTable.userId eq loginId.trim()
+                       StaffTable.userId eq loginId
                    }.map {
                        toStaff(it)
                    }.firstOrNull()
-               }catch (e:Exception){
-                   println("Error in the query: $e")
-                   null
-               }
 
             }
 

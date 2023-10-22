@@ -18,10 +18,12 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import data.repository.AdminRepository
 import domain.model.staff.Staff
 import domain.util.AdminPopup
 import presentation.admin_home_page.popups.AdminForm
 import presentation.admin_home_page.popups.AdminViewTable
+import presentation.admin_home_page.popups.UpdateStaffPopup
 import presentation.components.TopBar
 
 
@@ -91,8 +93,8 @@ fun AdminHomePage(
 
             when(viewModel.popWindowState){
 
-                AdminPopup.AddStaffForm -> AdminForm(staffState = null){viewModel.popWindowState=null}
-                AdminPopup.UpdateStaffForm -> AdminForm(staffState =Staff(id = 0, userid = "testID", firstName = "test", lastName = "test", passWord = "ada")){viewModel.popWindowState=null}
+                AdminPopup.AddStaffForm -> AdminForm(viewModel = AdminViewModel(AdminRepository())){viewModel.popWindowState=null}
+                AdminPopup.UpdateStaffForm -> UpdateStaffPopup(viewModel = AdminViewModel(AdminRepository())){viewModel.popWindowState=null}
                 AdminPopup.ViewRecord -> AdminViewTable{viewModel.popWindowState=null}
                 null -> {}
             }

@@ -6,11 +6,20 @@
   <component name="ChangeListManager">
     <list default="true" id="4a558f88-293a-4dcd-8f58-c50e16093ffd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/0e4ed51f-6cf2-46a9-8576-03b1dfa819e7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0e4ed51f-6cf2-46a9-8576-03b1dfa819e7.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_17-10-2023_21_32__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_17-10-2023_21_32__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_19-10-2023_17_06__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_19-10-2023_17_06__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0e4ed51f-6cf2-46a9-8576-03b1dfa819e7/storage_v2/_src_/schema/main.uQUzAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0e4ed51f-6cf2-46a9-8576-03b1dfa819e7/storage_v2/_src_/schema/main.uQUzAA.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/identifier.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/identifier.sqlite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/data/repository/AdminRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/data/repository/AdminRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/data/repository/LoginRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/data/repository/LoginRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/domain/model/staff/Staff.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/domain/model/staff/Staff.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/domain/model/staff/StaffTable.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/domain/model/staff/StaffTable.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/domain/repository/AdminRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/domain/repository/AdminRepository.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/admin_home_page/AdminHomePage.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/admin_home_page/AdminHomePage.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/admin_home_page/AdminViewRecordTable.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/admin_home_page/popups/AdminViewRecordTable.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/admin_home_page/AdminViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/admin_home_page/AdminViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/admin_home_page/popups/AddStaffForm.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/admin_home_page/popups/AddStaffForm.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/admin_home_page/popups/UpdatStaffForm.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/admin_home_page/popups/UpdatStaffForm.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/components/TopBar.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/components/TopBar.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/view_record_page/ViewRecordPage.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/view_record_page/ViewRecordPage.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,9 +46,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Kotlin File" />
         <option value="Kotlin Interface" />
         <option value="Kotlin Class" />
+        <option value="Kotlin File" />
       </list>
     </option>
   </component>
@@ -65,31 +74,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "tableAdminC",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "E:/VitaScan/Vitascan/src/main/kotlin/ui",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;tableAdminC&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/VitaScan/Vitascan/src/main/kotlin/ui&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\VitaScan\Vitascan\src\main\kotlin\ui" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\VitaScan\Vitascan\src\main\kotlin\presentation\admin_home_page\popups" />
       <recent name="E:\VitaScan\Vitascan\src\main\kotlin" />
       <recent name="E:\VitaScan\Vitascan\src\main\kotlin\ui" />
     </key>
@@ -105,6 +115,7 @@
       <workItem from="1697364762882" duration="10658000" />
       <workItem from="1697385374491" duration="8589000" />
       <workItem from="1697432122765" duration="1822000" />
+      <workItem from="1697974171901" duration="1224000" />
     </task>
     <servers />
   </component>

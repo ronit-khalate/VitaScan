@@ -15,6 +15,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import domain.model.staff.Staff
+import presentation.admin_home_page.AdminViewModel
 
 
 @Composable
@@ -22,7 +23,7 @@ fun AdminForm(
     modifier: Modifier=Modifier
         .height(610.dp)
         .width(510.dp),
-    staffState: Staff?,
+    viewModel: AdminViewModel,
     onCardClose:()->Unit,
 ){
 
@@ -75,15 +76,14 @@ fun AdminForm(
             ) {
 
 
-                UpdateStaffFormRow("Staff Id", "Enter Staff ID")
+
+                AddStaffFormRow("First Name", "Enter Staff Name", value = viewModel.firstName){viewModel.firstName=it}
                 Spacer(modifier = Modifier.height(15.dp))
-                UpdateStaffFormRow("First Name", "Enter Staff Name")
+                AddStaffFormRow("Last Name", "Enter User Name", value = viewModel.lastName){viewModel.lastName=it}
                 Spacer(modifier = Modifier.height(15.dp))
-                UpdateStaffFormRow("Last Name", "Enter User Name")
+                AddStaffFormRow("Mobile No", "Enter Mobile Number", value = viewModel.mobile){viewModel.mobile=it}
                 Spacer(modifier = Modifier.height(15.dp))
-                UpdateStaffFormRow("Mobile No", "Enter Mobile Number")
-                Spacer(modifier = Modifier.height(15.dp))
-                UpdateStaffFormRow("Password", "Enter Password")
+                AddStaffFormRow("Password", "Enter Password", value = viewModel.password){viewModel.password=it}
                 Spacer(modifier = Modifier.height(15.dp))
 
                 Row(
@@ -91,9 +91,9 @@ fun AdminForm(
                         .height(60.dp)
                 ) {
 
-                    if (staffState==null) {
+
                         TextButton(
-                            onClick = {},
+                            onClick = viewModel::AddStaff,
                             modifier = Modifier
                                 .width(120.dp),
                             colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colors.primary),
@@ -101,17 +101,7 @@ fun AdminForm(
                         ) {
                             Text("Add", style = MaterialTheme.typography.button)
                         }
-                    } else {
-                        TextButton(
-                            modifier = Modifier
-                                .width(120.dp),
-                            onClick = {},
-                            colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colors.primary),
-                            shape = RoundedCornerShape(20.dp),
-                        ) {
-                            Text("Update", style = MaterialTheme.typography.button)
-                        }
-                    }
+
 
 
                 }
@@ -127,9 +117,11 @@ fun AdminForm(
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun row(
+fun AddStaffFormRow(
     inputType:String,
-    label: String
+    label: String,
+    value:String,
+    onValueChange:(String)->Unit
 ){
 
     Row(
@@ -146,8 +138,8 @@ fun row(
         OutlinedTextField(
             modifier = Modifier
                 .fillMaxWidth(),
-            value = "",
-            onValueChange = {},
+            value = value,
+            onValueChange = onValueChange,
             shape = RoundedCornerShape(20.dp),
             label={ Text(text = label) }
 

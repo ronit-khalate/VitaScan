@@ -16,6 +16,7 @@ import com.arkivanov.decompose.router.stack.StackNavigation
 import com.arkivanov.essenty.lifecycle.LifecycleRegistry
 import com.example.compose.LightColors
 import data.localDataSource.DataBase
+import data.repository.AdminRepository
 import data.repository.LoginRepository
 import domain.model.staffcount.StaffCount
 import domain.model.staff.StaffTable
@@ -78,7 +79,7 @@ fun MainContent(
 
     val navigation = remember { StackNavigation<Screen>() }
     val loginScreenViewModel by remember { mutableStateOf(LoginPageViewModel(repository = LoginRepository(), navigation = navigation)) }
-    val adminScreenViewModel by remember { mutableStateOf(AdminViewModel()) }
+    val adminScreenViewModel by remember { mutableStateOf(AdminViewModel(AdminRepository())) }
 
     ChildStack(
         source = navigation,
