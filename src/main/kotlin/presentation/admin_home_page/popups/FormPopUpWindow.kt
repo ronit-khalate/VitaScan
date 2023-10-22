@@ -1,4 +1,4 @@
-package presentation.admin_home_page
+package presentation.admin_home_page.popups
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
