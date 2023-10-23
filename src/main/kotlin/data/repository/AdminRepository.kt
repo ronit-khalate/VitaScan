@@ -3,6 +3,7 @@ package data.repository
 import domain.model.staff.Staff
 import domain.model.staffcount.StaffCount
 import domain.model.staff.StaffTable
+import domain.model.staff.toStaff
 import domain.model.staffcount.toStaffCountCls
 import domain.repository.AdminRepository
 import org.jetbrains.exposed.sql.insert
@@ -37,6 +38,24 @@ class AdminRepositoryImpl :AdminRepository{
             }
 
 
+        }
+    }
+
+    override suspend fun loadDoc(staffId: String): Staff? =transaction {
+
+            StaffTable.select {
+                StaffTable.userId eq staffId
+            }.map { toStaff(it) }.firstOrNull()
+        }
+
+    override suspend fun updateDoc(staff: Staff) {
+
+        transaction {
+            StaffTable.update(where = {StaffTable.userId eq staff.userid}){
+
+                it[mobile]=staff.mobile
+                it[password]=staff.passWord
+            }
         }
     }
 
