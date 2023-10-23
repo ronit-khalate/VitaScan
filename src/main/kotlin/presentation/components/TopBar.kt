@@ -1,9 +1,7 @@
 package presentation.components
 
 import androidx.compose.desktop.ui.tooling.preview.Preview
-import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
+import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -134,18 +132,28 @@ fun TopBar(
 
             ) {
 
-                Box(
-                    modifier=Modifier
-                        .size(50.dp)
-                        .clip(CircleShape)
-                        .background(MaterialTheme.colors.background)
-                        .clickable {  },
-                    contentAlignment = Alignment.Center
+                ContextMenuArea(
+                    items = {
+                        listOf(
+                            ContextMenuItem(label = "Welcome ${staff.firstName}"){},
+                            ContextMenuItem(label = "Log Out"){}
+                        )
+                    }
                 ){
+                    Box(
+                        modifier=Modifier
+                            .size(50.dp)
+                            .clip(CircleShape)
+                            .background(MaterialTheme.colors.background)
+                            .clickable {  },
+                        contentAlignment = Alignment.Center
+                    ){
 
-                    Text(text = staff.firstName[0].toString().uppercase(), fontWeight = FontWeight.SemiBold, fontSize = 30.sp)
+                        Text(text = staff.firstName[0].toString().uppercase(), fontWeight = FontWeight.SemiBold, fontSize = 30.sp)
 
+                    }
                 }
+
             }
         }
 
