@@ -72,17 +72,13 @@ fun AddDocForm(
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
 
-
-
-                AddDocFormRow("Staff Id", "Enter Staff ID")
+                AddDocFormRow("First Name", "Enter First Name",""){}
                 Spacer(modifier = Modifier.height(15.dp))
-                AddDocFormRow("First Name", "Enter Staff Name")
+                AddDocFormRow("Last Name", "Enter last Name",""){}
                 Spacer(modifier = Modifier.height(15.dp))
-                AddDocFormRow("Last Name", "Enter User Name")
+                AddDocFormRow("Mobile No", "Enter Mobile Number",""){}
                 Spacer(modifier = Modifier.height(15.dp))
-                AddDocFormRow("Mobile No", "Enter Mobile Number")
-                Spacer(modifier = Modifier.height(15.dp))
-                AddDocFormRow("Password", "Enter Password")
+                AddDocFormRow("Password", "Enter Password",""){}
                 Spacer(modifier = Modifier.height(15.dp))
 
                 Row(
@@ -117,7 +113,9 @@ fun AddDocForm(
 @Composable
 fun AddDocFormRow(
     inputType:String,
-    label: String
+    label: String,
+    value:String,
+    onValueChange:(String)->Unit
 ){
 
     Row(
@@ -134,8 +132,8 @@ fun AddDocFormRow(
         OutlinedTextField(
             modifier = Modifier
                 .fillMaxWidth(),
-            value = "",
-            onValueChange = {},
+            value = value,
+            onValueChange = onValueChange,
             shape = RoundedCornerShape(20.dp),
             label={ Text(text = label) }
 
