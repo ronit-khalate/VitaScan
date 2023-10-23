@@ -19,6 +19,7 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.text.font.FontStyle
@@ -48,6 +49,7 @@ fun ViewRecordPage(
 }
 
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun TableBackgroundAndSearchBar(
     paddingValue:PaddingValues= PaddingValues(0.dp)
@@ -64,10 +66,9 @@ fun TableBackgroundAndSearchBar(
         //Search Bar
         OutlinedTextField(
             modifier = Modifier
-                .background(MaterialTheme.colors.surface)
-                .width(500.dp)
-                .height(45.dp),
+                .width(500.dp),
             value = "",
+            colors = TextFieldDefaults.textFieldColors(containerColor = MaterialTheme.colors.surface),
             onValueChange = {},
             label = {
                 Text("      Search By PID", fontWeight = FontWeight.SemiBold)
