@@ -76,15 +76,15 @@ fun AdminForm(
 
 
 
-                row("Staff Id", "Enter Staff ID")
+                AddDocFormRow("Staff Id", "Enter Staff ID")
                 Spacer(modifier = Modifier.height(15.dp))
-                row("Staff Name", "Enter Staff Name")
+                AddDocFormRow("Staff Name", "Enter Staff Name")
                 Spacer(modifier = Modifier.height(15.dp))
-                row("Mobile No", "Enter Mobile Number")
+                AddDocFormRow("Mobile No", "Enter Mobile Number")
                 Spacer(modifier = Modifier.height(15.dp))
-                row("User Name", "Enter User Name")
+                AddDocFormRow("User Name", "Enter User Name")
                 Spacer(modifier = Modifier.height(15.dp))
-                row("Password", "Enter Password")
+                AddDocFormRow("Password", "Enter Password")
                 Spacer(modifier = Modifier.height(15.dp))
 
                 Row(
@@ -128,7 +128,7 @@ fun AdminForm(
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun row(
+fun AddDocFormRow(
     inputType:String,
     label: String
 ){
