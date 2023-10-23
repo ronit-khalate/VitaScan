@@ -27,6 +27,8 @@ class AdminViewModel(val repository: AdminRepository) :Viewmodel {
     var updateDocOldPassword by mutableStateOf("")
     var updateDocNewPassword by mutableStateOf("")
 
+
+    // Add From function
     fun onAddDoc(){
 
         val doctor=Staff(
@@ -44,6 +46,63 @@ class AdminViewModel(val repository: AdminRepository) :Viewmodel {
             repository.addDoctor(staff = doctor)
         }
     }
+
+    // Update From function
+    fun loadDoc(staffID:String){
+
+        viewmodelScopeIo.launch {
+            val doc=repository.loadDoc(staffID)
+
+           if(doc!=null){
+               updateDocStaffId=doc.userid
+               updateDocMobile=doc.mobile
+               updateDocFirstName=doc.firstName
+               updateDocLastName=doc.lastName
+               updateDocOldPassword=doc.passWord
+
+           }
+
+            popWindowState=null
+        }
+    }
+
+    fun onUpdate(){
+
+        if(updateDocNewPassword==""){
+            val staff=Staff(
+                id=0,
+                userid = updateDocStaffId,
+                firstName = updateDocFirstName,
+                lastName = updateDocLastName,
+                mobile =updateDocMobile,
+                passWord = updateDocOldPassword
+
+            )
+            viewmodelScopeIo.launch {
+                repository.updateDoc(staff)
+                popWindowState=null
+            }
+
+        }
+        else if (updateDocNewPassword.length>=5 && updateDocNewPassword.length<10){
+
+            val staff=Staff(
+                id=0,
+                userid = updateDocStaffId,
+                firstName = updateDocFirstName,
+                lastName = updateDocLastName,
+                mobile =updateDocMobile,
+                passWord = updateDocNewPassword
+
+            )
+
+            viewmodelScopeIo.launch {
+                repository.updateDoc(staff)
+                popWindowState=null
+            }
+        }
+    }
+
 
 
 }
