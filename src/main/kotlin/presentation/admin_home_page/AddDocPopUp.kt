@@ -21,6 +21,7 @@ fun AddDocForm(
     modifier: Modifier = Modifier
         .height(610.dp)
         .width(510.dp),
+    viewModel: AdminViewModel,
     onCardClose: () -> Unit,
 ){
 
@@ -72,13 +73,13 @@ fun AddDocForm(
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
 
-                AddDocFormRow("First Name", "Enter First Name",""){}
+                AddDocFormRow("First Name", "Enter First Name", value = viewModel.addDocFirstName){viewModel.addDocFirstName=it}
                 Spacer(modifier = Modifier.height(15.dp))
-                AddDocFormRow("Last Name", "Enter last Name",""){}
+                AddDocFormRow("Last Name", "Enter last Name",value=viewModel.addDocLastName){viewModel.addDocLastName=it}
                 Spacer(modifier = Modifier.height(15.dp))
-                AddDocFormRow("Mobile No", "Enter Mobile Number",""){}
+                AddDocFormRow("Mobile No", "Enter Mobile Number", value = viewModel.addDocMobileNumber){viewModel.addDocMobileNumber=it}
                 Spacer(modifier = Modifier.height(15.dp))
-                AddDocFormRow("Password", "Enter Password",""){}
+                AddDocFormRow("Password", "Enter Password", value = viewModel.addDocPassword){viewModel.addDocPassword=it}
                 Spacer(modifier = Modifier.height(15.dp))
 
                 Row(
@@ -87,7 +88,7 @@ fun AddDocForm(
                 ) {
 
                         TextButton(
-                            onClick = {},
+                            onClick = viewModel::onAddDoc,
                             modifier = Modifier
                                 .width(120.dp),
                             colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colors.primary),
