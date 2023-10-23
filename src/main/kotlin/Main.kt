@@ -14,20 +14,21 @@ import com.arkivanov.decompose.extensions.compose.jetbrains.stack.animation.fade
 import com.arkivanov.decompose.extensions.compose.jetbrains.stack.animation.stackAnimation
 import com.arkivanov.decompose.router.stack.StackNavigation
 import com.arkivanov.essenty.lifecycle.LifecycleRegistry
-import com.example.compose.LightColors
+import ui.theme.LightColors
 import data.localDataSource.DataBase
 import data.repository.AdminRepository
 import data.repository.LoginRepository
 import domain.model.staffcount.StaffCount
 import domain.model.staff.StaffTable
 import navigation.ChildStack
+
 import navigation.ProvideComponentContext
 import navigation.Screen
 import org.jetbrains.exposed.sql.SchemaUtils
 import org.jetbrains.exposed.sql.transactions.transaction
 import presentation.admin_home_page.AdminHomePage
 import presentation.admin_home_page.AdminViewModel
-import presentation.login_page.LoginScreen
+import presentation.login_page.*
 import presentation.doctor_home_screen.DoctorHomePage
 import presentation.login_page.LoginPageViewModel
 import presentation.view_record_page.ViewRecordPage

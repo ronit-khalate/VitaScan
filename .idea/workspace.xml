@@ -6,20 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="4a558f88-293a-4dcd-8f58-c50e16093ffd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/0e4ed51f-6cf2-46a9-8576-03b1dfa819e7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0e4ed51f-6cf2-46a9-8576-03b1dfa819e7.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0e4ed51f-6cf2-46a9-8576-03b1dfa819e7/storage_v2/_src_/schema/main.uQUzAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0e4ed51f-6cf2-46a9-8576-03b1dfa819e7/storage_v2/_src_/schema/main.uQUzAA.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/identifier.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/identifier.sqlite" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/data/repository/AdminRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/data/repository/AdminRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/data/repository/LoginRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/data/repository/LoginRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/domain/model/staff/Staff.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/domain/model/staff/Staff.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/domain/model/staff/StaffTable.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/domain/model/staff/StaffTable.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/domain/repository/AdminRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/domain/repository/AdminRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/admin_home_page/AdminHomePage.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/admin_home_page/AdminHomePage.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/admin_home_page/AdminViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/admin_home_page/AdminViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/admin_home_page/popups/AddStaffForm.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/admin_home_page/popups/AddStaffForm.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/admin_home_page/popups/UpdatStaffForm.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/admin_home_page/popups/UpdatStaffForm.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/components/TopBar.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/components/TopBar.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/view_record_page/ViewRecordPage.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/view_record_page/ViewRecordPage.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ui/theme/Theme.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ui/theme/Theme.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +23,9 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand />
@@ -104,6 +96,20 @@
       <recent name="E:\VitaScan\Vitascan\src\main\kotlin\ui" />
     </key>
   </component>
+  <component name="RunManager" selected="Kotlin.MainKt">
+    <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MainKt" />
+      <module name="vitascan.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Kotlin.MainKt" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -115,7 +121,8 @@
       <workItem from="1697364762882" duration="10658000" />
       <workItem from="1697385374491" duration="8589000" />
       <workItem from="1697432122765" duration="1822000" />
-      <workItem from="1697974171901" duration="1224000" />
+      <workItem from="1697974171901" duration="1523000" />
+      <workItem from="1697975726451" duration="555000" />
     </task>
     <servers />
   </component>
