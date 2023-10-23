@@ -5,9 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4a558f88-293a-4dcd-8f58-c50e16093ffd" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0e4ed51f-6cf2-46a9-8576-03b1dfa819e7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0e4ed51f-6cf2-46a9-8576-03b1dfa819e7.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0e4ed51f-6cf2-46a9-8576-03b1dfa819e7/storage_v2/_src_/schema/main.uQUzAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0e4ed51f-6cf2-46a9-8576-03b1dfa819e7/storage_v2/_src_/schema/main.uQUzAA.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/identifier.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/identifier.sqlite" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/data/repository/AdminRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/data/repository/AdminRepository.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/admin_home_page/AdminHomePage.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/admin_home_page/AdminHomePage.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/components/TopBar.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/components/TopBar.kt" afterDir="false" />
@@ -138,6 +135,7 @@
       <workItem from="1697695431092" duration="9736000" />
       <workItem from="1697776750065" duration="21518000" />
       <workItem from="1697902451965" duration="11524000" />
+      <workItem from="1698039219397" duration="509000" />
     </task>
     <servers />
   </component>

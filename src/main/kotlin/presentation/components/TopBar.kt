@@ -201,6 +201,6 @@ fun SelectedBottomBorder(modifier: Modifier){
 @Composable
 fun TopBarPreview(){
 
-    TopBar(Staff(34,"","Ronit","",""))
+    TopBar(Staff(34,"","Ronit","","",""))
 }
 

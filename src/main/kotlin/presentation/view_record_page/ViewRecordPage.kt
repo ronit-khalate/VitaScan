@@ -228,5 +228,5 @@ fun TableContent(){
 @Composable
 @Preview
 private fun Preview(){
-    ViewRecordPage(staff = Staff(23,"","","",""))
+    ViewRecordPage(staff = Staff(23,"","","","",""))
 }
