@@ -19,7 +19,7 @@ fun toStaff(row:ResultRow):Staff{
         userid = row[StaffTable.userId],
         firstName = row[StaffTable.firstName],
         lastName = row[StaffTable.lastName],
-
+        mobile = row[StaffTable.mobile],
         passWord = row[StaffTable.password]
     )
 }
