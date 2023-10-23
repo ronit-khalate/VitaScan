@@ -20,6 +20,7 @@ class AdminViewModel(val repository: AdminRepository) :Viewmodel {
     var addDocPassword by mutableStateOf("")
 
     //Update Doc form
+    var updateDocStaffId by mutableStateOf("")
     var updateDocFirstName by mutableStateOf("")
     var updateDocLastName by mutableStateOf("")
     var updateDocMobile by mutableStateOf("")
