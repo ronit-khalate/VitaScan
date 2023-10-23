@@ -3,11 +3,13 @@ package presentation.admin_home_page
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
+import domain.model.staff.Staff
 import domain.repository.AdminRepository
 import domain.util.AdminPopup
 import domain.viewmodel.Viewmodel
+import kotlinx.coroutines.launch
 
-class AdminViewModel(repository: AdminRepository) :Viewmodel {
+class AdminViewModel(val repository: AdminRepository) :Viewmodel {
 
     var popWindowState:AdminPopup? by mutableStateOf<AdminPopup?>(null)
 
@@ -23,6 +25,24 @@ class AdminViewModel(repository: AdminRepository) :Viewmodel {
     var updateDocMobile by mutableStateOf("")
     var updateDocOldPassword by mutableStateOf("")
     var updateDocNewPassword by mutableStateOf("")
+
+    fun onAddDoc(){
+
+        val doctor=Staff(
+            id=0,
+            userid = "",
+            firstName = this.addDocFirstName,
+            lastName = this.addDocLastName,
+            mobile = this.addDocMobileNumber,
+            passWord = this.addDocPassword
+        )
+
+
+        viewmodelScopeIo.launch {
+
+            repository.addDoctor(staff = doctor)
+        }
+    }
 
 
 }
