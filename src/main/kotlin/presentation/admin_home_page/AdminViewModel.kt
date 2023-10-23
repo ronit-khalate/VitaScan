@@ -3,10 +3,11 @@ package presentation.admin_home_page
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
+import domain.repository.AdminRepository
 import domain.util.AdminPopup
 import domain.viewmodel.Viewmodel
 
-class AdminViewModel:Viewmodel {
+class AdminViewModel(repository: AdminRepository) :Viewmodel {
 
     var popWindowState:AdminPopup? by mutableStateOf<AdminPopup?>(null)
 
