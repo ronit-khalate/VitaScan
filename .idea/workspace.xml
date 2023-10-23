@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a558f88-293a-4dcd-8f58-c50e16093ffd" name="Changes" comment="" />
+    <list default="true" id="4a558f88-293a-4dcd-8f58-c50e16093ffd" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/admin_home_page/AdminViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/admin_home_page/AdminViewModel.kt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -130,7 +133,7 @@
       <workItem from="1697695431092" duration="9736000" />
       <workItem from="1697776750065" duration="21518000" />
       <workItem from="1697902451965" duration="11524000" />
-      <workItem from="1698039219397" duration="1966000" />
+      <workItem from="1698039219397" duration="2761000" />
     </task>
     <servers />
   </component>

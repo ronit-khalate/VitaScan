@@ -10,4 +10,18 @@ class AdminViewModel:Viewmodel {
 
     var popWindowState:AdminPopup? by mutableStateOf<AdminPopup?>(null)
 
+    // Add Doc Form
+    var addDocFirstName by mutableStateOf("")
+    var addDocLastName by mutableStateOf("")
+    var addDocMobileNumber by mutableStateOf("")
+    var addDocPassword by mutableStateOf("")
+
+    //Update Doc form
+    var updateDocFirstName by mutableStateOf("")
+    var updateDocLastName by mutableStateOf("")
+    var updateDocMobile by mutableStateOf("")
+    var updateDocOldPassword by mutableStateOf("")
+    var updateDocNewPassword by mutableStateOf("")
+
+
 }
