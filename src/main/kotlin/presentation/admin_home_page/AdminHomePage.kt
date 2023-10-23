@@ -21,6 +21,7 @@ import androidx.compose.ui.unit.sp
 import domain.model.staff.Staff
 import domain.util.AdminPopup
 import presentation.admin_home_page.popups.AddDocForm
+import presentation.admin_home_page.popups.UpdateDocForm
 import presentation.components.TopBar
 
 
@@ -91,7 +92,7 @@ fun AdminHomePage(
             when(viewModel.popWindowState){
 
                 AdminPopup.AddStaffForm -> AddDocForm(viewModel=viewModel) {viewModel.popWindowState=null}
-                AdminPopup.UpdateStaffForm -> AddDocForm(viewModel=viewModel) {viewModel.popWindowState=null}
+                AdminPopup.UpdateStaffForm -> UpdateDocForm(viewModel=viewModel) {viewModel.popWindowState=null}
                 AdminPopup.ViewRecord -> AdminViewTable{viewModel.popWindowState=null}
                 null -> {}
             }
