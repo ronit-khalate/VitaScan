@@ -5,5 +5,6 @@ data class Staff(
     val userid:String,
     val firstName:String,
     val lastName:String,
+    val mobile:String,
     val passWord:String
 )
