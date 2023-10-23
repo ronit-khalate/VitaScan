@@ -14,16 +14,14 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import domain.model.staff.Staff
 
 
 @Composable
-fun AdminForm(
-    modifier: Modifier=Modifier
+fun AddDocForm(
+    modifier: Modifier = Modifier
         .height(610.dp)
         .width(510.dp),
-    staffState: Staff?,
-    onCardClose:()->Unit,
+    onCardClose: () -> Unit,
 ){
 
 
@@ -92,7 +90,6 @@ fun AdminForm(
                         .height(60.dp)
                 ) {
 
-                    if (staffState==null) {
                         TextButton(
                             onClick = {},
                             modifier = Modifier
@@ -102,17 +99,7 @@ fun AdminForm(
                         ) {
                             Text("Add", style = MaterialTheme.typography.button)
                         }
-                    } else {
-                        TextButton(
-                            modifier = Modifier
-                                .width(120.dp),
-                            onClick = {},
-                            colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colors.primary),
-                            shape = RoundedCornerShape(20.dp),
-                        ) {
-                            Text("Update", style = MaterialTheme.typography.button)
-                        }
-                    }
+
 
 
                 }

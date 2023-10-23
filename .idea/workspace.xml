@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4a558f88-293a-4dcd-8f58-c50e16093ffd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/admin_home_page/AddDocPopUp.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/admin_home_page/AddDocPopUp.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/admin_home_page/AdminHomePage.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/admin_home_page/AdminHomePage.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +133,7 @@
       <workItem from="1697695431092" duration="9736000" />
       <workItem from="1697776750065" duration="21518000" />
       <workItem from="1697902451965" duration="11524000" />
-      <workItem from="1698039219397" duration="1229000" />
+      <workItem from="1698039219397" duration="1635000" />
     </task>
     <servers />
   </component>
