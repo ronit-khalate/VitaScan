@@ -100,6 +100,6 @@ fun DoctorHomePage(
 @Composable
 @Preview
 fun StaffHomePreview(){
-    DoctorHomePage(onInsertClick = {}, onViewRecordClick = {}, doctor = Staff(5,"","","",""))
+    DoctorHomePage(onInsertClick = {}, onViewRecordClick = {}, doctor = Staff(5,"","","","",""))
 
 }
