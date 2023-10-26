@@ -40,6 +40,24 @@ class AdminViewModel(val repository: AdminRepository) :Viewmodel {
             passWord = this.addDocPassword
         )
 
+        //
+
+        if(doctor.firstName.length>10 || doctor.firstName.length<=2){
+
+        }
+
+        if(doctor.lastName.length>10 || doctor.lastName.length<=2){
+
+        }
+        if(doctor.mobile.length!=10){
+
+        }
+
+        if(doctor.passWord.length<5 || doctor.passWord.length>10){
+
+        }
+
+
 
         viewmodelScopeIo.launch {
 

@@ -23,4 +23,10 @@ class MedicalStaffViewModel(
             it::class!=Screen.Login::class
         }
     }
+
+
+    fun onInsertRecordBtnClick(medicalStaff: Staff){
+
+        navigation.push(Screen.InsertRecordPage(medicalStaff))
+    }
 }

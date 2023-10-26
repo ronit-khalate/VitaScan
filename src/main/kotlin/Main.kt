@@ -29,6 +29,7 @@ import presentation.login_page.LoginScreen
 import presentation.medicalStaff_home_screen.DoctorHomePage
 import presentation.login_page.LoginPageViewModel
 import presentation.medicalStaff_home_screen.MedicalStaffViewModel
+import presentation.medicalStaff_home_screen.insertpage.InsertRecordPage
 import presentation.view_record_page.ViewRecordPage
 import presentation.view_record_page.ViewRecordPageViewModel
 
@@ -95,6 +96,7 @@ fun MainContent(
             is Screen.AdminHome -> AdminHomePage(admin = screen.staff, viewModel = adminScreenViewModel)
             is Screen.Login -> LoginScreen(modifier = Modifier.fillMaxSize(), viewModel = loginScreenViewModel)
             is Screen.ViewRecordPage -> ViewRecordPage(staff = screen.staff, viewModel = viewRecordPageViewModel)
+            is Screen.InsertRecordPage -> InsertRecordPage()
         }
 
     }

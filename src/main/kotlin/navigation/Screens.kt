@@ -26,6 +26,9 @@ sealed class Screen(
 
     @Parcelize
     class ViewRecordPage(override val staff: Staff):Screen(staff)
+
+    @Parcelize
+    class InsertRecordPage(override val staff: Staff):Screen(staff)
 }
 
 val LocalComponentContext:ProvidableCompositionLocal<ComponentContext> =

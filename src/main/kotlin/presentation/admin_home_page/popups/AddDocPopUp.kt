@@ -11,10 +11,14 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import presentation.admin_home_page.AdminViewModel
+import presentation.admin_home_page.utils.ValidationError
 
 
 @Composable
@@ -117,8 +121,11 @@ fun AddDocFormRow(
     inputType:String,
     label: String,
     value:String,
-    onValueChange:(String)->Unit
+    onValueChange:(String)->Unit,
+
 ){
+
+
 
     Row(
         modifier = Modifier
@@ -137,7 +144,8 @@ fun AddDocFormRow(
             value = value,
             onValueChange = onValueChange,
             shape = RoundedCornerShape(20.dp),
-            label={ Text(text = label) }
+            label={ Text(text = label) },
+            supportingText = { Text("", color = MaterialTheme.colors.error) }
 
 
 

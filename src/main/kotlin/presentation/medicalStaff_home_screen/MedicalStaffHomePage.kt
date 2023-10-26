@@ -84,7 +84,7 @@ fun DoctorHomePage(
                 Button(
                     modifier = Modifier
                         .width(120.dp),
-                    onClick = {  },
+                    onClick = { viewModel.onInsertRecordBtnClick(medicalStaff = medicalStaff) },
                     shape = RoundedCornerShape(20.dp),
 
                 ){
