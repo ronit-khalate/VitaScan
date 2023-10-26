@@ -84,7 +84,8 @@ fun UpdateDocForm(
             UpDateDocFormRow(
                 keyBordAction = {
                     print("In Key board Action")
-                    viewModel.loadDoc(viewModel.updateDocStaffId) },
+                    viewModel.loadDoc(viewModel.updateDocStaffId)
+                                },
                 enabled = true,
                 inputType = "Staff ID",
                 label = "Enter Staff Id",

@@ -44,6 +44,7 @@ class AdminViewModel(val repository: AdminRepository) :Viewmodel {
         viewmodelScopeIo.launch {
 
             repository.addDoctor(staff = doctor)
+            popWindowState=null
         }
     }
 
@@ -62,7 +63,6 @@ class AdminViewModel(val repository: AdminRepository) :Viewmodel {
 
            }
 
-            popWindowState=null
         }
     }
 

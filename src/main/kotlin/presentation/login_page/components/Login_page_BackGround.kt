@@ -2,6 +2,7 @@ package presentation.login_page.components
 
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material.Card
 import androidx.compose.material.MaterialTheme
@@ -18,17 +19,9 @@ fun LoginPageBackground(
 
         Card(
             modifier=Modifier
-                .fillMaxHeight()
-                .fillMaxWidth(0.5f),
+                .fillMaxSize(),
             elevation = 0.dp,
-            backgroundColor = MaterialTheme.colors.primary
-        ){}
-        Card(
-            modifier=Modifier
-                .fillMaxHeight()
-                .fillMaxWidth(0.5f),
-            elevation = 0.dp,
-            backgroundColor = MaterialTheme.colors.background
+            backgroundColor = MaterialTheme.colors.primaryVariant
         ){}
     }
 }

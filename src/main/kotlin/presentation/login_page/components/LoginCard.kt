@@ -1,6 +1,9 @@
 package presentation.login_page.components
 
 import androidx.compose.desktop.ui.tooling.preview.Preview
+import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.*
@@ -11,6 +14,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.loadImageBitmap
+import androidx.compose.ui.res.useResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -30,8 +35,10 @@ fun LoginCard(
 
     Card(
         modifier=modifier,
-        elevation = 1.dp,
-        backgroundColor = Color.Transparent
+        elevation = 10.dp,
+        backgroundColor = androidx.compose.material.MaterialTheme.colors.background,
+        border = BorderStroke(width = 2.dp, color = androidx.compose.material.MaterialTheme.colors.primary),
+        shape = RoundedCornerShape(size = 30.dp)
     ){
 
         Row(
@@ -43,17 +50,28 @@ fun LoginCard(
                 modifier=Modifier
                     .fillMaxHeight()
                     .fillMaxWidth()
-                    .weight(1f),
+                    .weight(1f)
+                ,
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.Center
             ){
+                val image = useResource("vitascan_Logo (2).png"){
+
+                    loadImageBitmap(it)
+                }
+
+                Image(
+                    bitmap = image,
+                    contentDescription ="Logo Vitascan"
+                )
+
+                Spacer(modifier=Modifier.height(height = 30.dp))
                 Text(
-                    "Health \nStart Here",
+                    "VitaScan",
                     fontSize = 60.sp,
                     style = MaterialTheme.typography.headlineLarge,
                     fontWeight = FontWeight.Black,
-                    color = androidx.compose.material.MaterialTheme.colors.onPrimary
-                )
+                    color = androidx.compose.material.MaterialTheme.colors.primary                )
 
 
             }
@@ -81,7 +99,8 @@ fun LoginCard(
                     singleLine = true,
                     onValueChange = onLoginIdValueChange,
                     label = { Text("Login Id") },
-                    leadingIcon = {Icons.Filled.Person}
+                    leadingIcon = {Icons.Filled.Person},
+                    shape = RoundedCornerShape(size = 20.dp)
                 )
 
                 Spacer(modifier=Modifier.heightIn(20.dp))
@@ -91,7 +110,8 @@ fun LoginCard(
                     onValueChange = onLoginPasswordValueChange,
                     label = { Text("Password") },
                     leadingIcon = {Icons.Filled.Person},
-                    trailingIcon = {Icons.Filled.Person}
+                    trailingIcon = {Icons.Filled.Person},
+                    shape = RoundedCornerShape(size = 20.dp)
                 )
 
 
@@ -109,7 +129,7 @@ fun LoginCard(
                     ),
                     onClick = onLogin
                 ){
-                    Text("Log in", color = androidx.compose.material.MaterialTheme.colors.onSurface)
+                    Text("Log in", color = androidx.compose.material.MaterialTheme.colors.background)
                 }
 
 
