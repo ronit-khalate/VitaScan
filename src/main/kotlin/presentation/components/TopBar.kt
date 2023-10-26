@@ -32,6 +32,8 @@ fun TopBar(
     staff: Staff,
     modifier: Modifier=Modifier,
     isBackButtonVisible:Boolean=false,
+    onBackBtnClick:()->Unit={},
+    onLogOutClick:()->Unit={}
 
     ){
 
@@ -85,7 +87,7 @@ fun TopBar(
                         Image(
                             modifier=Modifier
                                 .size(30.dp)
-                                .clickable {  },
+                                .clickable { onBackBtnClick() },
                             imageVector = Icons.Filled.KeyboardArrowLeft,
                             contentDescription = "Go Back")
                     }
@@ -136,7 +138,7 @@ fun TopBar(
                     items = {
                         listOf(
                             ContextMenuItem(label = "Welcome ${staff.firstName}"){},
-                            ContextMenuItem(label = "Log Out"){}
+                            ContextMenuItem(label = "Log Out"){onLogOutClick()}
                         )
                     }
                 ){
@@ -209,6 +211,6 @@ fun SelectedBottomBorder(modifier: Modifier){
 @Composable
 fun TopBarPreview(){
 
-    TopBar(Staff(34,"","Ronit","","",""))
+//    TopBar(Staff(34,"","Ronit","","",""))
 }
 
