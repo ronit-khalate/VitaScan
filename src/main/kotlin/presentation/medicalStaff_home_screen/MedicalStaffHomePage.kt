@@ -1,4 +1,4 @@
-package presentation.doctor_home_screen
+package presentation.medicalStaff_home_screen
 
 import androidx.compose.desktop.ui.tooling.preview.Preview
 import androidx.compose.foundation.BorderStroke
