@@ -28,14 +28,13 @@ import presentation.components.TopBar
 @Composable
 fun DoctorHomePage(
 
-    doctor:Staff,
-    onViewRecordClick:()->Unit,
-    onInsertClick:()->Unit,
+    viewModel: MedicalStaffViewModel,
+    medicalStaff:Staff,
 ){
 
     Scaffold(
 
-        topBar = { TopBar(staff = doctor) }
+        topBar = { TopBar(staff = medicalStaff, onBackBtnClick = {}, onLogOutClick = viewModel::onLogOut) }
 
     ){
 
@@ -72,7 +71,7 @@ fun DoctorHomePage(
                 OutlinedButton(
                     modifier = Modifier
                         .width(120.dp),
-                    onClick = onViewRecordClick,
+                    onClick = {viewModel.onViewRecord(medicalStaff = medicalStaff)},
                     border = BorderStroke(2.dp, color = MaterialTheme.colors.primary),
                     shape = RoundedCornerShape(20.dp),
                     colors = ButtonDefaults.outlinedButtonColors(backgroundColor = MaterialTheme.colors.onPrimary)
@@ -85,7 +84,7 @@ fun DoctorHomePage(
                 Button(
                     modifier = Modifier
                         .width(120.dp),
-                    onClick = onInsertClick,
+                    onClick = {  },
                     shape = RoundedCornerShape(20.dp),
 
                 ){
@@ -100,6 +99,6 @@ fun DoctorHomePage(
 @Composable
 @Preview
 fun StaffHomePreview(){
-    DoctorHomePage(onInsertClick = {}, onViewRecordClick = {}, doctor = Staff(5,"","","","",""))
+//    DoctorHomePage(viewModel = MedicalStaffViewModel(), doctor = Staff(5,"","","","",""))
 
 }
