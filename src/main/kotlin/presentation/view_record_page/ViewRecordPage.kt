@@ -33,14 +33,15 @@ import presentation.components.TopBar
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ViewRecordPage(
-    staff:Staff
+    staff:Staff,
+    viewModel: ViewRecordPageViewModel
 ){
 
 
 
     Scaffold(
 
-        topBar = { TopBar(staff=staff,isBackButtonVisible = true) }
+        topBar = { TopBar(staff=staff,isBackButtonVisible = true, onBackBtnClick =viewModel::onBackBtnClick , onLogOutClick = viewModel::onLogOut) }
     ){
 
         TableBackgroundAndSearchBar(paddingValue = it)
@@ -192,19 +193,20 @@ fun TableContent(){
         border = BorderStroke(width = 1.dp, color = MaterialTheme.colors.onBackground)
     ){
 
+        // Header Row
+        RecordRow(
+            modifier = Modifier.fillMaxWidth(),
+            column = listOf("Sr No","Date","Record No","Staff ID"),
+            color = MaterialTheme.colors.primary
+        )
+
         LazyColumn(
             modifier = Modifier
                 .fillMaxSize(),
             userScrollEnabled = true
         ){
 
-            item {
-                RecordRow(
-                    modifier = Modifier.fillMaxWidth(),
-                    column = listOf("Sr No","Date","Record No","Staff ID"),
-                    color = MaterialTheme.colors.primary
-                )
-            }
+
             items(100){
 
                 if(recordRowColorFlag){
@@ -229,5 +231,5 @@ fun TableContent(){
 @Composable
 @Preview
 private fun Preview(){
-    ViewRecordPage(staff = Staff(23,"","","","",""))
+//    ViewRecordPage(staff = Staff(23,"","","","",""))
 }
