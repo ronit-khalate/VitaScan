@@ -1,4 +1,4 @@
-package presentation.doctor_home_screen.insertpage
+package presentation.medicalStaff_home_screen.insertpage
 
 import androidx.compose.desktop.ui.tooling.preview.Preview
 import androidx.compose.foundation.layout.Box

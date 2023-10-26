@@ -4,9 +4,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.window.Window
-import androidx.compose.ui.window.application
-import androidx.compose.ui.window.rememberWindowState
+import androidx.compose.ui.window.*
 import com.arkivanov.decompose.DefaultComponentContext
 import com.arkivanov.decompose.ExperimentalDecomposeApi
 import com.arkivanov.decompose.extensions.compose.jetbrains.lifecycle.LifecycleController
@@ -28,9 +26,11 @@ import org.jetbrains.exposed.sql.transactions.transaction
 import presentation.admin_home_page.AdminHomePage
 import presentation.admin_home_page.AdminViewModel
 import presentation.login_page.LoginScreen
-import presentation.doctor_home_screen.DoctorHomePage
+import presentation.medicalStaff_home_screen.DoctorHomePage
 import presentation.login_page.LoginPageViewModel
+import presentation.medicalStaff_home_screen.MedicalStaffViewModel
 import presentation.view_record_page.ViewRecordPage
+import presentation.view_record_page.ViewRecordPageViewModel
 
 
 @OptIn(ExperimentalDecomposeApi::class)
@@ -40,9 +40,9 @@ fun main() {
     val rootComponentContext = DefaultComponentContext(lifecycle=lifecycle)
     application {
 
-       val windowState = rememberWindowState()
+       val windowState = rememberWindowState(placement = WindowPlacement.Maximized)
         LifecycleController(lifecycle,windowState)
-        Window(onCloseRequest = ::exitApplication) {
+        Window(onCloseRequest = ::exitApplication, title = "VitaScan", state = windowState) {
 
 
             DataBase.connect()
@@ -80,6 +80,8 @@ fun MainContent(
     val navigation = remember { StackNavigation<Screen>() }
     val loginScreenViewModel by remember { mutableStateOf(LoginPageViewModel(repository = LoginRepository(), navigation = navigation)) }
     val adminScreenViewModel by remember { mutableStateOf(AdminViewModel(repository = AdminRepositoryImpl())) }
+    val medicalStaffViewModel by remember { mutableStateOf(MedicalStaffViewModel(navigation=navigation)) }
+    val viewRecordPageViewModel by remember { mutableStateOf(ViewRecordPageViewModel(navigation = navigation)) }
 
     ChildStack(
         source = navigation,
@@ -89,10 +91,10 @@ fun MainContent(
     ){screen ->
 
         when(screen){
-            is Screen.DoctorHome -> DoctorHomePage(doctor = screen.staff,{},{},)
+            is Screen.DoctorHome -> DoctorHomePage(medicalStaff = screen.staff, viewModel = medicalStaffViewModel)
             is Screen.AdminHome -> AdminHomePage(admin = screen.staff, viewModel = adminScreenViewModel)
             is Screen.Login -> LoginScreen(modifier = Modifier.fillMaxSize(), viewModel = loginScreenViewModel)
-            is Screen.ViewRecordPage -> ViewRecordPage(staff = screen.staff)
+            is Screen.ViewRecordPage -> ViewRecordPage(staff = screen.staff, viewModel = viewRecordPageViewModel)
         }
 
     }

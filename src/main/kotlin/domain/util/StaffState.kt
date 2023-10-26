@@ -5,5 +5,5 @@ sealed class StaffState(
     val id:String
 ) {
     class Admin(firstName: String,id:String) :StaffState(firstName,id)
-    class Doctor(firstName: String,id: String):StaffState(firstName,id)
+    class MedicalStaff(firstName: String, id: String):StaffState(firstName,id)
 }
