@@ -5,23 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4a558f88-293a-4dcd-8f58-c50e16093ffd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/admin_home_page/utils/ValidationError.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_16-10-2023_12_30__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_17-10-2023_16_48__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_17-10-2023_16_51__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_17-10-2023_21_32__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_19-10-2023_17_06_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_19-10-2023_17_06__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/navigation/Screens.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/navigation/Screens.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/admin_home_page/AdminViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/admin_home_page/AdminViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/admin_home_page/popups/AddDocPopUp.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/admin_home_page/popups/AddDocPopUp.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/medicalStaff_home_screen/MedicalStaffHomePage.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/medicalStaff_home_screen/MedicalStaffHomePage.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/medicalStaff_home_screen/MedicalStaffViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/medicalStaff_home_screen/MedicalStaffViewModel.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/medicalStaff_home_screen/insertpage/InsertRecordPage.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/medicalStaff_home_screen/insertpage/InsertRecordPage.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/util/FileChooser.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/util/FileChooser.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +139,8 @@
       <workItem from="1697902451965" duration="11524000" />
       <workItem from="1698039219397" duration="2761000" />
       <workItem from="1698337812654" duration="2878000" />
-      <workItem from="1698340945555" duration="1801000" />
+      <workItem from="1698340945555" duration="4432000" />
+      <workItem from="1698384938696" duration="1637000" />
     </task>
     <servers />
   </component>

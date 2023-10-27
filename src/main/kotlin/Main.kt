@@ -96,7 +96,7 @@ fun MainContent(
             is Screen.AdminHome -> AdminHomePage(admin = screen.staff, viewModel = adminScreenViewModel)
             is Screen.Login -> LoginScreen(modifier = Modifier.fillMaxSize(), viewModel = loginScreenViewModel)
             is Screen.ViewRecordPage -> ViewRecordPage(staff = screen.staff, viewModel = viewRecordPageViewModel)
-            is Screen.InsertRecordPage -> InsertRecordPage()
+            is Screen.InsertRecordPage -> InsertRecordPage(viewModel = medicalStaffViewModel)
         }
 
     }

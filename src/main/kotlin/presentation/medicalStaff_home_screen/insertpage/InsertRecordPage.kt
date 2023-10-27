@@ -12,6 +12,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowDropDown
+import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -27,13 +28,20 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import domain.model.staff.Staff
 import presentation.components.TopBar
+import presentation.medicalStaff_home_screen.MedicalStaffViewModel
 import util.OpenFileDialog
+import java.net.URI
+import java.nio.file.LinkOption
 import java.nio.file.Path
+import kotlin.io.path.exists
+import kotlin.io.path.toPath
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalComposeUiApi::class)
 @Preview
 @Composable
- fun InsertRecordPage(){
+ fun InsertRecordPage(
+     viewModel: MedicalStaffViewModel
+ ){
 
      Scaffold(
          modifier = Modifier
@@ -77,9 +85,9 @@ import java.nio.file.Path
                          ){
 
                          OutlinedTextField(
-                             value = "",
+                             value = viewModel.pid,
                              label = { Text(text = "Enter PID") },
-                             onValueChange = {},
+                             onValueChange = {viewModel.pid=it},
                              singleLine = true,
                              shape = RoundedCornerShape(size = 30.dp),
                              leadingIcon = { Image(imageVector =  Icons.Filled.Person,contentDescription = null) }
@@ -136,8 +144,8 @@ import java.nio.file.Path
                          OutlinedTextField(
                              modifier = Modifier
                                  .fillMaxWidth(),
-                             value = "",
-                             onValueChange = {},
+                             value = viewModel.pid,
+                             onValueChange = {viewModel.pid=it},
                              shape = RoundedCornerShape(20.dp),
                              label={ Text(text = "Enter PID") },
                              supportingText = { Text("", color = MaterialTheme.colors.error) }
@@ -162,8 +170,8 @@ import java.nio.file.Path
                          OutlinedTextField(
                              modifier = Modifier
                                  .fillMaxWidth(),
-                             value = "",
-                             onValueChange = {},
+                             value = viewModel.firstName,
+                             onValueChange = {viewModel.firstName=it},
                              shape = RoundedCornerShape(20.dp),
                              label={ Text(text = "Enter First Name") },
                              supportingText = { Text("", color = MaterialTheme.colors.error) }
@@ -188,8 +196,8 @@ import java.nio.file.Path
                          OutlinedTextField(
                              modifier = Modifier
                                  .fillMaxWidth(),
-                             value = "",
-                             onValueChange = {},
+                             value = viewModel.lastName,
+                             onValueChange = {viewModel.lastName=it},
                              shape = RoundedCornerShape(20.dp),
                              label={ Text(text = "Enter Last Name") },
                              supportingText = { Text("", color = MaterialTheme.colors.error) }
@@ -201,15 +209,21 @@ import java.nio.file.Path
                      val dragAndDropModifie =Modifier.padding(horizontal = 4.dp, vertical = 4.dp)
                      DragAndDropFileBox(
                          modifier = dragAndDropModifie
-                             .size(height = 250.dp, width = 450.dp)
-                     ){
-
+                             .size(height = 250.dp, width = 450.dp),
+                         viewModel=viewModel
+                     ){dragData->
+                         if (dragData is DragData.FilesList) {
+                             val newFiles= dragData.readFiles().mapNotNull {
+                                 URI(it).toPath().takeIf { it.exists(LinkOption.NOFOLLOW_LINKS) }
+                             }
+                             viewModel.selectedImages = (viewModel.selectedImages + newFiles).distinct()
+                         }
                      }
 
                      OutlinedButton(
                          onClick = {},
                      ){
-                         Text("Submit")
+                         Text("Scan")
                      }
                  }
              }
@@ -229,7 +243,8 @@ private object Colors {
     val fileItemFg = Color.White
 }
 @Composable
-private fun FileListView(modifier: Modifier = Modifier, files: List<Path>) {
+private fun FileListView(modifier: Modifier = Modifier, files: List<Path>,viewModel: MedicalStaffViewModel) {
+
     LazyColumn(modifier) {
         items(files){
             Box(
@@ -238,12 +253,25 @@ private fun FileListView(modifier: Modifier = Modifier, files: List<Path>) {
                         Colors.fileItemBg, shape = RoundedCornerShape(100.dp)
                     )
             ) {
-                Text(
-                    text = it.fileName.toString(),
-                    color = Colors.fileItemFg,
-                    modifier = Modifier.padding(5.dp),
-                    fontSize = 14.sp
-                )
+               Row{
+                    Text(
+                        text = it.fileName.toString(),
+                        color = Colors.fileItemFg,
+                        modifier = Modifier.padding(5.dp),
+                        fontSize = 14.sp,
+                    )
+                   Spacer(modifier=Modifier.width(10.dp))
+
+                   Image(
+                       modifier=Modifier
+                           .clickable { viewModel.onRemoveSelectedFile(it) },
+                       imageVector = Icons.Filled.Close,
+                       contentDescription = null
+
+                   )
+
+                }
+
             }
         }
     }
@@ -253,7 +281,7 @@ private fun FileListView(modifier: Modifier = Modifier, files: List<Path>) {
 
 @OptIn(ExperimentalComposeUiApi::class)
 @Composable
-fun DragAndDropFileBox(modifier: Modifier = Modifier, onDrop: (DragData) -> Unit) {
+fun DragAndDropFileBox(modifier: Modifier = Modifier,viewModel: MedicalStaffViewModel, onDrop: (DragData) -> Unit) {
     var isDragging by remember { mutableStateOf(false) }
     val dragNDropColor = if (isDragging) Colors.active else Colors.default
 
@@ -269,10 +297,17 @@ fun DragAndDropFileBox(modifier: Modifier = Modifier, onDrop: (DragData) -> Unit
                 })
     ) {
         Column(modifier = Modifier.align(Alignment.Center)) {
-            DragAndDropDescription(
-                modifier = Modifier.align(Alignment.CenterHorizontally),
-                color = dragNDropColor
-            )
+
+            if(viewModel.selectedImages.isEmpty()){
+                DragAndDropDescription(
+                    modifier = Modifier.align(Alignment.CenterHorizontally),
+                    color = dragNDropColor
+                )
+            }
+            else{
+                FileListView(files = viewModel.selectedImages, viewModel = viewModel)
+            }
+
         }
     }
 }
@@ -328,5 +363,5 @@ fun Modifier.dashedBorder(strokeWidth: Dp, color: Color, cornerRadiusDp: Dp) = c
 @Composable
 @Preview
 private fun preview(){
-    InsertRecordPage()
+//    InsertRecordPage()
 }
