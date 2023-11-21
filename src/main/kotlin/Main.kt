@@ -23,6 +23,7 @@ import navigation.ProvideComponentContext
 import navigation.Screen
 import org.jetbrains.exposed.sql.SchemaUtils
 import org.jetbrains.exposed.sql.transactions.transaction
+import presentation.aboutus.AboutUsPage
 import presentation.admin_home_page.AdminHomePage
 import presentation.admin_home_page.AdminViewModel
 import presentation.login_page.LoginScreen
@@ -94,6 +95,7 @@ fun MainContent(
         when(screen){
             is Screen.DoctorHome -> DoctorHomePage(medicalStaff = screen.staff, viewModel = medicalStaffViewModel)
             is Screen.AdminHome -> AdminHomePage(admin = screen.staff, viewModel = adminScreenViewModel)
+//            is Screen.Login -> AboutUsPage()
             is Screen.Login -> LoginScreen(modifier = Modifier.fillMaxSize(), viewModel = loginScreenViewModel)
             is Screen.ViewRecordPage -> ViewRecordPage(staff = screen.staff, viewModel = viewRecordPageViewModel)
             is Screen.InsertRecordPage -> InsertRecordPage(viewModel = medicalStaffViewModel)

@@ -28,6 +28,7 @@ dependencies {
 
 
 
+
     // Material 3 {1.3.0 working}
     implementation("org.jetbrains.compose.material3:material3-desktop:1.3.0")
 

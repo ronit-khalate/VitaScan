@@ -5,10 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4a558f88-293a-4dcd-8f58-c50e16093ffd" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/aboutus/AboutUsPage.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_23-10-2023_14_04_[Changes]/identifier.sqlite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_23-10-2023_14_04_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_23-10-2023_14_04__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/medicalStaff_home_screen/MedicalStaffViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/medicalStaff_home_screen/MedicalStaffViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/medicalStaff_home_screen/insertpage/InsertRecordPage.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/medicalStaff_home_screen/insertpage/InsertRecordPage.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/VITASCANLogo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/update_staff.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view_staff.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/vitascan_Logo.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,8 +47,8 @@
       <list>
         <option value="Kotlin Interface" />
         <option value="Kotlin Object" />
-        <option value="Kotlin File" />
         <option value="Kotlin Class" />
+        <option value="Kotlin File" />
       </list>
     </option>
   </component>
@@ -140,7 +147,11 @@
       <workItem from="1698039219397" duration="2761000" />
       <workItem from="1698337812654" duration="2878000" />
       <workItem from="1698340945555" duration="4432000" />
-      <workItem from="1698384938696" duration="1637000" />
+      <workItem from="1698384938696" duration="7010000" />
+      <workItem from="1698393522942" duration="3135000" />
+      <workItem from="1698477862611" duration="3077000" />
+      <workItem from="1700466634787" duration="206000" />
+      <workItem from="1700597944824" duration="3000" />
     </task>
     <servers />
   </component>
@@ -224,6 +235,15 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-function">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/presentation/aboutus/AboutUsPage.kt</url>
+          <line>247</line>
+          <properties method="preview">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/kotlin/presentation/view_record_page/ViewRecordPage.kt</url>
