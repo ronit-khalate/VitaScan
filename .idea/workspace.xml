@@ -5,10 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4a558f88-293a-4dcd-8f58-c50e16093ffd" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0e4ed51f-6cf2-46a9-8576-03b1dfa819e7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0e4ed51f-6cf2-46a9-8576-03b1dfa819e7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/aboutus/AboutUsPage.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_23-10-2023_14_04_[Changes]/identifier.sqlite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_23-10-2023_14_04_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_23-10-2023_14_04__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ui/theme/Theme.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ui/theme/Theme.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/VITASCANLogo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/update_staff.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view_staff.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/vitascan_Logo.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +46,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin Interface" />
+        <option value="Kotlin Object" />
         <option value="Kotlin Class" />
         <option value="Kotlin File" />
       </list>
@@ -47,10 +55,18 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="staffHome" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://C:/Program Files/Java/jdk-17/lib/src.zip!/java.base/java/io/Serializable.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.arkivanov.essenty/parcelable-jvm/1.2.0/b7e11fad646bf948aa160368ff94aa4d34d4120e/parcelable-jvm-1.2.0-sources.jar!/jvmMain/com/arkivanov/essenty/parcelable/Parcelable.kt" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.compose.material/material-desktop/1.4.1/51750a0024449892cf637eb8eef96a0fa3dd9712/material-desktop-1.4.1-sources.jar!/commonMain/androidx/compose/material/Colors.kt" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.compose.material/material-desktop/1.4.1/51750a0024449892cf637eb8eef96a0fa3dd9712/material-desktop-1.4.1-sources.jar!/commonMain/androidx/compose/material/MaterialTheme.kt" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.compose.ui/ui-desktop/1.4.1/d9e1fc41d26f7a2703d812635a8e5d2a7181a19b/ui-desktop-1.4.1-sources.jar!/commonMain/androidx/compose/ui/layout/ContentScale.kt" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.compose.ui/ui-text-desktop/1.4.1/fd7eaca24cb09940b10d96ce00600c7765dff1d1/ui-text-desktop-1.4.1-sources.jar!/commonMain/androidx/compose/ui/text/TextStyle.kt" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
@@ -68,13 +84,14 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;tableAdminC&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/VitaScan/Vitascan/src/main/kotlin/ui&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/VitaScan/Vitascan/src/main/resources&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -83,32 +100,32 @@
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;sqlite&quot;
+    ]
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\VitaScan\Vitascan\src\main\resources" />
       <recent name="E:\VitaScan\Vitascan\src\main\kotlin\ui" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\VitaScan\Vitascan\src\main\kotlin\presentation\admin_home_page\popups" />
+      <recent name="E:\VitaScan\Vitascan\src\main\kotlin\presentation\admin_home_page" />
+      <recent name="E:\VitaScan\Vitascan\src\main\resources" />
       <recent name="E:\VitaScan\Vitascan\src\main\kotlin" />
       <recent name="E:\VitaScan\Vitascan\src\main\kotlin\ui" />
     </key>
-  </component>
-  <component name="RunManager" selected="Kotlin.MainKt">
-    <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MainKt" />
-      <module name="vitascan.main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Kotlin.MainKt" />
-      </list>
-    </recent_temporary>
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="domain.model.staffcount" />
+      <recent name="domain.model.staff" />
+      <recent name="domain.model" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -121,13 +138,78 @@
       <workItem from="1697364762882" duration="10658000" />
       <workItem from="1697385374491" duration="8589000" />
       <workItem from="1697432122765" duration="1822000" />
-      <workItem from="1697974171901" duration="1523000" />
-      <workItem from="1697975726451" duration="555000" />
+      <workItem from="1697563991284" duration="729000" />
+      <workItem from="1697611130259" duration="8475000" />
+      <workItem from="1697695350160" duration="48000" />
+      <workItem from="1697695431092" duration="9736000" />
+      <workItem from="1697776750065" duration="21518000" />
+      <workItem from="1697902451965" duration="11524000" />
+      <workItem from="1698039219397" duration="2761000" />
+      <workItem from="1698337812654" duration="2878000" />
+      <workItem from="1698340945555" duration="4432000" />
+      <workItem from="1698384938696" duration="7010000" />
+      <workItem from="1698393522942" duration="3135000" />
+      <workItem from="1698477862611" duration="3077000" />
+      <workItem from="1700466634787" duration="206000" />
+      <workItem from="1700597944824" duration="3000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="5d278b95-98fe-4225-a671-c2b1597926df" value="TOOL_WINDOW" />
+      </map>
+    </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="5d278b95-98fe-4225-a671-c2b1597926df">
+          <value>
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -136,6 +218,38 @@
           <properties class="java.lang.UnsatisfiedLinkError" package="java.lang" />
           <option name="timeStamp" value="5" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-function">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/presentation/login_page/components/LoginCard.kt</url>
+          <line>154</line>
+          <properties method="LoginCardPre">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-function">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/presentation/admin_home_page/AdminHomePage.kt</url>
+          <line>224</line>
+          <properties>
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-function">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/presentation/aboutus/AboutUsPage.kt</url>
+          <line>247</line>
+          <properties method="preview">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/presentation/view_record_page/ViewRecordPage.kt</url>
+          <line>62</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

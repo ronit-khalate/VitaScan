@@ -45,6 +45,12 @@ dependencies {
         //  Decompose dependency
     implementation ("com.arkivanov.decompose:decompose:$decomposeVersion")
 
+    // Model Kotlin DL
+    implementation("org.jetbrains.kotlinx:kotlin-deeplearning-tensorflow:0.6.0-alpha-1")
+    implementation("org.jetbrains.kotlinx:kotlin-deeplearning-dataset:0.6.0-alpha-1")
+    implementation("org.jetbrains.kotlinx:kotlin-deeplearning-impl:0.6.0-alpha-1")
+    implementation("org.jetbrains.kotlinx:kotlin-deeplearning-api:0.6.0-alpha-1")
+
 }
 
 compose.desktop {
