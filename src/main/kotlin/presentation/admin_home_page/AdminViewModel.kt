@@ -102,7 +102,7 @@ class AdminViewModel(val repository: AdminRepository) :Viewmodel {
             }
 
         }
-        else if (updateDocNewPassword.length>=5 && updateDocNewPassword.length<10){
+        else if (updateDocNewPassword.length in 5..9){
 
             val staff=Staff(
                 id=0,

@@ -92,9 +92,9 @@ fun AdminHomePage(
 
             when(viewModel.popWindowState){
 
-                AdminPopup.AddStaffForm -> AddDocForm(viewModel=viewModel) {viewModel.popWindowState=null}
-                AdminPopup.UpdateStaffForm -> UpdateDocForm(viewModel=viewModel) {viewModel.popWindowState=null}
-                AdminPopup.ViewRecord -> AdminViewTable{viewModel.popWindowState=null}
+                is AdminPopup.AddStaffForm -> AddDocForm(viewModel=viewModel) {viewModel.popWindowState=null}
+                is AdminPopup.UpdateStaffForm -> UpdateDocForm(viewModel=viewModel) {viewModel.popWindowState=null}
+                is AdminPopup.ViewRecord -> AdminViewTable{viewModel.popWindowState=null}
                 null -> {}
             }
 

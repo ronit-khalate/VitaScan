@@ -95,7 +95,6 @@ fun MainContent(
         when(screen){
             is Screen.DoctorHome -> DoctorHomePage(medicalStaff = screen.staff, viewModel = medicalStaffViewModel)
             is Screen.AdminHome -> AdminHomePage(admin = screen.staff, viewModel = adminScreenViewModel)
-//            is Screen.Login -> AboutUsPage()
             is Screen.Login -> LoginScreen(modifier = Modifier.fillMaxSize(), viewModel = loginScreenViewModel)
             is Screen.ViewRecordPage -> ViewRecordPage(staff = screen.staff, viewModel = viewRecordPageViewModel)
             is Screen.InsertRecordPage -> InsertRecordPage(viewModel = medicalStaffViewModel)
