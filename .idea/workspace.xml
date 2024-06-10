@@ -5,11 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4a558f88-293a-4dcd-8f58-c50e16093ffd" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0e4ed51f-6cf2-46a9-8576-03b1dfa819e7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0e4ed51f-6cf2-46a9-8576-03b1dfa819e7.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_04-12-2023_12_55__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UI Images/Admin_Home_Screen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UI Images/Admin_Update_staff.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UI Images/Admin_add_staff.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UI Images/Doctor's_Home_Screen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UI Images/Insert_New_Patient.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UI Images/Login_As_Admin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UI Images/Login_As_Doctor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UI Images/Login_Screen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UI Images/View_Paitent_Record.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/identifier.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/identifier.sqlite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +158,7 @@
       <workItem from="1701831830800" duration="1233000" />
       <workItem from="1705389800726" duration="223000" />
       <workItem from="1705390059757" duration="100000" />
-      <workItem from="1718035667553" duration="2000" />
+      <workItem from="1718035667553" duration="598000" />
     </task>
     <servers />
   </component>
